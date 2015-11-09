@@ -1,25 +1,27 @@
 grammar Calc;
 
-calcfile: (formset|converter) constdecl? vardecl? section*;
+calcfile: converter constdecl? vardecl? section*;
 
 
 formset :
     'FORM' ID  '.' form ';';
 
-converter: 'UPDATE' ID TO ID ';'
-           'DESCRIPTION' LITERAL ';';
+converter: 'XMLConverter' ID 'EFXML' ';';
+
+
 form: ID;
 
 section :
-    (SECTION ID|PROCEDURE ID '(' ')') ';'
+    PROCEDURE ID '(' typeDecl? ')' ';'
+    formdecl
 	vardecl?
 	stmt;
 
 
 block: BEGIN stmt* END;
 
-stmt: (assign | call  | ret | block | forloopstruct | breakStruct ) ';' |  ifStruct | withForms;
-open_stmt: assign | call  | ret | block | forloopstruct|ifStruct | withForms;
+stmt: (assign | call  | ret | block | forloopstruct | breakStruct ) ';' |  ifStruct | withForms |withNewTag;
+open_stmt: assign | call  | ret | block | forloopstruct|ifStruct | withForms |withNewTag;
 
 assign: full_id (LET|ALTLET|CRAZYLET) expr ;
 
@@ -48,8 +50,13 @@ expr : expr op=('/' | '*') expr #DivMul
 	;
 argList : (expr (',' expr)*)? ;
 
+formdecl: 'FORM'  ID ';' ;
+
 vardecl : VAR declList*;
 constdecl : CONSTANT constdeclList*;
+
+
+typeDecl : (varDecl (',' varDecl)*)? ':' r_type ;
 
 declList : (varDecl (',' varDecl)*)? ':' r_type ';' ;
 constdeclList: varDecl '='  LITERAL ';';
@@ -64,6 +71,7 @@ ctrlStruct : ifStruct;
 ifStruct : IF expr THEN open_stmt (';'|ELSE elseStruct)?;
 
 withForms: WITHFORMS '(' full_id ',' full_id ')' DO  stmt;
+withNewTag: WITHNEWTAG '(' LITERAL ')' DO  stmt;
 
 elseStruct: stmt;
 
@@ -131,6 +139,9 @@ FOR: F O R;
 NOT: N O T;
 BREAK: B R E A K;
 WITHFORMS: W I T H F O R M S;
+WITHNEWTAG: W I T H N E W T A G;
+
+FORM: F O R M;
 
 WHILE : W H I L E;
 LOOP : L O O P;

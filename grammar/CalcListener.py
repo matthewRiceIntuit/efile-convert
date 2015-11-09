@@ -75,11 +75,11 @@ class CalcListener(ParseTreeListener):
 
     # Enter a parse tree produced by CalcParser#block.
     def enterBlock(self, ctx):
-        self.enter('block')
+        pass
 
     # Exit a parse tree produced by CalcParser#block.
     def exitBlock(self, ctx):
-        self.exit()
+        pass
 
         # Enter a parse tree produced by CalcParser#dumbblock.
 
@@ -118,7 +118,7 @@ class CalcListener(ParseTreeListener):
 
     # Enter a parse tree produced by CalcParser#call.
     def enterCall(self, ctx):
-        self.enter("Call", ctx.ID().getText().lower())
+        self.enter(ctx.ID().getText().upper() )
 
     # Exit a parse tree produced by CalcParser#call.
     def exitCall(self, ctx):
@@ -144,7 +144,10 @@ class CalcListener(ParseTreeListener):
 
     # Enter a parse tree produced by CalcParser#Literal.
     def enterLiteral(self, ctx):
-        self.close("Literal", cgi.escape(ctx.LITERAL().getText()).replace('"', "&quot;"))
+        if  '"' in ctx.LITERAL().getText():
+            self.close("String", cgi.escape(ctx.LITERAL().getText()).replace('"', ""))
+        else:
+            self.close("Literal", cgi.escape(ctx.LITERAL().getText()).replace('"', "&quot;"))
 
     # Exit a parse tree produced by CalcParser#Literal.
     def exitLiteral(self, ctx):
@@ -188,11 +191,11 @@ class CalcListener(ParseTreeListener):
 
     # Enter a parse tree produced by CalcParser#VarRef.
     def enterVarRef(self, ctx):
-        self.enter("VarRef")
+        pass
 
     # Exit a parse tree produced by CalcParser#VarRef.
     def exitVarRef(self, ctx):
-        self.exit()
+        pass
 
 
     # Enter a parse tree produced by CalcParser#FunctionCall.
@@ -356,11 +359,11 @@ class CalcListener(ParseTreeListener):
         # Enter a parse tree produced by CalcParser#FunctionCall.
 
     def enterFunctionCall(self, ctx):
-        self.enter("FunctionCall")
+        pass
 
     # Exit a parse tree produced by CalcParser#FunctionCall.
     def exitFunctionCall(self, ctx):
-        self.exit()
+        pass
 
         # Enter a parse tree produced by CalcParser#full_id.
 
@@ -489,3 +492,26 @@ class CalcListener(ParseTreeListener):
     # Exit a parse tree produced by CalcParser#end_index.
     def exitConverter(self, ctx):
         pass
+
+        # Enter a parse tree produced by CalcParser#end_index.
+    def enterTypeDecl(self, ctx):
+        self.enter("TypeDecl")
+
+    # Exit a parse tree produced by CalcParser#end_index.
+    def exitTypeDecl(self, ctx):
+        self.exit()
+
+    def enterFormdecl(self, ctx):
+        self.close("FormDecl",ctx.ID())
+
+    # Exit a parse tree produced by CalcParser#end_index.
+    def exitFormdecl(self, ctx):
+        pass
+
+    def enterWithNewTag(self, ctx):
+        self.enter("WithNewTag")
+
+    # Exit a parse tree produced by CalcParser#end_index.
+    def exitWithNewTag(self, ctx):
+        self.exit()
+
