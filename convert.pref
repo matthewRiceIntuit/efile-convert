@@ -1,11 +1,5 @@
 {
- "formset_dir": "C:/ProWin15/forms/VTF",
- "fedformset_dir":"C:/ProWin15/forms/1041_15",
- "calc_filename":"Z:/Dev/TaxContent/tax/ty15/main/state/incometax/vt/fiduc/comps/ffit161.clc",
- "cvt_filename":"Z:/Dev/TaxContent/tax/ty15/main/state/incometax/vt/fiduc/cvtrs/fed2vtf.cvt",
- "output_filename":"Z:/Dev/TaxContent/tax/ty15/main/state/incometax/vt/fiduc/help/zffit161.thx",
- "cl_path":null,
-  "close_tags": "True"
-
+ "ptformset_xml_path": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/fiduc/pri_tool/fs1041.ptformset",
+ "form_source": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/fiduc/pri_tool/"
 }
 

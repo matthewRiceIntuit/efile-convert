@@ -7,6 +7,9 @@ def pretty_print(node):
     print "============================================================\n\n"
     return xmlstr
 
+def ppr(node):
+    print etree.tostring(node, pretty_print = True)
+
 def xslt(root,xsl):
     try:
         xslt = etree.parse(xsl)
