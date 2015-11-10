@@ -71,13 +71,17 @@ ctrlStruct : ifStruct;
 ifStruct : IF expr THEN open_stmt (';'|ELSE elseStruct)?;
 
 withForms: WITHFORMS '(' full_id ',' full_id ')' DO  stmt;
-withNewTag: WITHNEWTAG '(' LITERAL ')' DO  stmt;
+withNewTag: WITHNEWTAG '(' expr ')' DO  stmt;
 
 elseStruct: stmt;
 
 loopStruct : DO (WHILE preCond=expr)?
 				stmt
 			LOOP (WHILE postCond=expr)? ;
+
+caseStuct: CASE expr OF  caseStmt+;
+
+caseStmt:  INT ':' block;
 
 forloopstruct: FOR ID ':=' expr TO expr DO  (block|stmt);
 
@@ -126,6 +130,7 @@ fragment Z:('z'|'Z');
 
 ARRAY: A R R A Y;
 OF: O F;
+CASE: C A S E;
 VAR: V A R;
 CONSTANT: C O N S T A N T;
 IF : I F ;

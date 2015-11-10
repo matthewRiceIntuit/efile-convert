@@ -1,5 +1,6 @@
 import sys
 import argparse
+import os
 import lxml.etree as etree
 import re
 from subprocess import check_output
@@ -24,7 +25,7 @@ def write_row(row):
 
 def render_field(form,field,mefform,meffield,func='',meftable=''):
     for ptfield in ptform_xml.xpath('//field[@id="%s"][field_attributes/cid_mapping]' % field ):
-        context =  ptfield.xpath('../..')[0].tag
+        context =  ptfield.xpath('../..')[0].tag + ptfield.get("context","")
         desc = ptfield.xpath("./field_attributes/main/name_and_descriptions/description/@value")
         formml_form_id = (ptfield.xpath("./field_attributes/cid_mapping/formml_form_id/@value") or [''])[0]
         formml_field_id =(ptfield.xpath("./field_attributes/cid_mapping/formml_field_id/@value") or [''])[0]
@@ -88,10 +89,11 @@ if __name__ == '__main__':
 
         write_row(["ERROR","Form.Field","MEF",'Function','context','PT description','CID','formml_field_on_value'])
         for section in root.xpath("//Section"):
-            import ipdb;ipdb.set_trace()
-            form = section.xpath("FormDecl//ID/@val")[-1].upper()
-            form_source = settings['form_source'] +  ptformset_xml.xpath("/formsetdoc/form_identification_list/form_identification[@form_id='%s']/@form_source" % form)[0]
+            form = section.xpath("FormDecl//ID[not(name(..)='ArrayIndex')]/@val")[-1].upper()
+            form_source = os.path.abspath(settings['form_source'] +  ptformset_xml.xpath("/formsetdoc/form_identification_list/form_identification[@form_id='%s']/@form_source" % form)[0].replace("\\","/"))
             ptform_xml = etree.parse(form_source)
+
+            print "\n\n\n######### FORM SOURCE: " , form_source,"\n\n\n"
 
             roottag = section.xpath(".//WithNewTag")[0]
             mefform = roottag.get('val')
