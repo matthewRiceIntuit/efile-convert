@@ -20,8 +20,8 @@ section :
 
 block: BEGIN stmt* END;
 
-stmt: (assign | call  | ret | block | forloopstruct | breakStruct ) ';' |  ifStruct | withForms |withNewTag;
-open_stmt: assign | call  | ret | block | forloopstruct|ifStruct | withForms |withNewTag;
+stmt: (assign | call  | ret | block | forloopstruct | breakStruct ) ';' |  ifStruct |caseStuct| withForms |withNewTag;
+open_stmt: assign | call  | ret | block |caseStuct| forloopstruct|ifStruct | withForms |withNewTag;
 
 assign: full_id (LET|ALTLET|CRAZYLET) expr ;
 
@@ -79,9 +79,9 @@ loopStruct : DO (WHILE preCond=expr)?
 				stmt
 			LOOP (WHILE postCond=expr)? ;
 
-caseStuct: CASE expr OF  caseStmt+;
+caseStuct: CASE expr OF  caseStmt+ END ';';
 
-caseStmt:  INT ':' block;
+caseStmt:  LITERAL ':' block ';';
 
 forloopstruct: FOR ID ':=' expr TO expr DO  (block|stmt);
 
