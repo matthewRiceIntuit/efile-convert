@@ -9,10 +9,10 @@ formset :
 converter: 'XMLConverter' ID 'EFXML' ';';
 
 
-form: ID;
+form: full_id;
 
 section :
-    PROCEDURE ID '(' typeDecl? ')' ';'
+    PROCEDURE ID '(' typeDeclList ')' ';'
     formdecl
 	vardecl?
 	stmt;
@@ -50,12 +50,12 @@ expr : expr op=('/' | '*') expr #DivMul
 	;
 argList : (expr (',' expr)*)? ;
 
-formdecl: 'FORM'  ID ';' ;
+formdecl: 'FORM'  full_id ';' ;
 
 vardecl : VAR declList*;
 constdecl : CONSTANT constdeclList*;
 
-
+typeDeclList: (typeDecl (';' typeDecl)*)? ;
 typeDecl : (varDecl (',' varDecl)*)? ':' r_type ;
 
 declList : (varDecl (',' varDecl)*)? ':' r_type ';' ;
@@ -153,7 +153,9 @@ LET : ':=' ;
 ALTLET: '?=';
 CRAZYLET: '#=';
 
-full_id : ID array_index? sub_id*;
+full_id : ID array_index? child_id* sub_id* ;
+
+child_id : ':' ID;
 
 sub_id : '.' ID array_index?;
 ID : [a-zA-Z_][a-zA-Z_0-9]*;

@@ -12,184 +12,195 @@ else:
 def serializedATN():
     with StringIO() as buf:
         buf.write(u"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3")
-        buf.write(u"G\u0187\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t")
+        buf.write(u"G\u019c\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t")
         buf.write(u"\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r")
         buf.write(u"\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4")
         buf.write(u"\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30")
         buf.write(u"\t\30\4\31\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t")
         buf.write(u"\35\4\36\t\36\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$")
-        buf.write(u"\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\3\2\3\2\5\2U\n\2")
-        buf.write(u"\3\2\5\2X\n\2\3\2\7\2[\n\2\f\2\16\2^\13\2\3\3\3\3\3\3")
-        buf.write(u"\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\6\3\6\3\6")
-        buf.write(u"\3\6\5\6q\n\6\3\6\3\6\3\6\3\6\5\6w\n\6\3\6\3\6\3\7\3")
-        buf.write(u"\7\7\7}\n\7\f\7\16\7\u0080\13\7\3\7\3\7\3\b\3\b\3\b\3")
-        buf.write(u"\b\3\b\3\b\5\b\u008a\n\b\3\b\3\b\3\b\3\b\3\b\5\b\u0091")
-        buf.write(u"\n\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\5\t\u009b\n\t\3")
-        buf.write(u"\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3")
-        buf.write(u"\f\3\f\3\f\3\f\3\r\3\r\5\r\u00af\n\r\3\16\3\16\5\16\u00b3")
-        buf.write(u"\n\16\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3")
-        buf.write(u"\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\5\17\u00c6\n\17")
-        buf.write(u"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3")
-        buf.write(u"\17\3\17\7\17\u00d4\n\17\f\17\16\17\u00d7\13\17\3\20")
-        buf.write(u"\3\20\3\20\7\20\u00dc\n\20\f\20\16\20\u00df\13\20\5\20")
-        buf.write(u"\u00e1\n\20\3\21\3\21\3\21\3\21\3\22\3\22\7\22\u00e9")
-        buf.write(u"\n\22\f\22\16\22\u00ec\13\22\3\23\3\23\7\23\u00f0\n\23")
-        buf.write(u"\f\23\16\23\u00f3\13\23\3\24\3\24\3\24\7\24\u00f8\n\24")
-        buf.write(u"\f\24\16\24\u00fb\13\24\5\24\u00fd\n\24\3\24\3\24\3\24")
-        buf.write(u"\3\25\3\25\3\25\7\25\u0105\n\25\f\25\16\25\u0108\13\25")
-        buf.write(u"\5\25\u010a\n\25\3\25\3\25\3\25\3\25\3\26\3\26\3\26\3")
-        buf.write(u"\26\3\26\3\27\3\27\3\30\5\30\u0118\n\30\3\30\3\30\3\31")
-        buf.write(u"\3\31\3\31\3\31\3\31\3\31\3\32\3\32\3\33\3\33\3\33\3")
-        buf.write(u"\33\3\33\3\33\3\33\5\33\u012b\n\33\3\34\3\34\3\34\3\34")
-        buf.write(u"\3\34\3\34\3\34\3\34\3\34\3\35\3\35\3\35\3\35\3\35\3")
-        buf.write(u"\35\3\35\3\36\3\36\3\37\3\37\3\37\5\37\u0142\n\37\3\37")
-        buf.write(u"\3\37\3\37\3\37\5\37\u0148\n\37\3 \3 \3 \3 \3 \3 \3 ")
-        buf.write(u"\3 \3 \5 \u0153\n \3!\3!\3\"\3\"\5\"\u0159\n\"\3#\3#")
-        buf.write(u"\3#\3#\5#\u015f\n#\3#\3#\3$\3$\7$\u0165\n$\f$\16$\u0168")
-        buf.write(u"\13$\3$\3$\3%\3%\3%\3%\5%\u0170\n%\3&\3&\5&\u0174\n&")
-        buf.write(u"\3&\7&\u0177\n&\f&\16&\u017a\13&\3\'\3\'\3\'\5\'\u017f")
-        buf.write(u"\n\'\3(\3(\3(\3(\3)\3)\3)\2\3\34*\2\4\6\b\n\f\16\20\22")
-        buf.write(u"\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNP")
-        buf.write(u"\2\t\3\2=?\3\2\32!\3\2\r\16\3\2\17\20\3\2\21\22\3\2\23")
-        buf.write(u"\31\3\2CE\u0195\2R\3\2\2\2\4_\3\2\2\2\6e\3\2\2\2\bj\3")
-        buf.write(u"\2\2\2\nl\3\2\2\2\fz\3\2\2\2\16\u0090\3\2\2\2\20\u009a")
-        buf.write(u"\3\2\2\2\22\u009c\3\2\2\2\24\u00a0\3\2\2\2\26\u00a5\3")
-        buf.write(u"\2\2\2\30\u00ae\3\2\2\2\32\u00b2\3\2\2\2\34\u00c5\3\2")
-        buf.write(u"\2\2\36\u00e0\3\2\2\2 \u00e2\3\2\2\2\"\u00e6\3\2\2\2")
-        buf.write(u"$\u00ed\3\2\2\2&\u00fc\3\2\2\2(\u0109\3\2\2\2*\u010f")
-        buf.write(u"\3\2\2\2,\u0114\3\2\2\2.\u0117\3\2\2\2\60\u011b\3\2\2")
-        buf.write(u"\2\62\u0121\3\2\2\2\64\u0123\3\2\2\2\66\u012c\3\2\2\2")
-        buf.write(u"8\u0135\3\2\2\2:\u013c\3\2\2\2<\u013e\3\2\2\2>\u0149")
-        buf.write(u"\3\2\2\2@\u0154\3\2\2\2B\u0156\3\2\2\2D\u015a\3\2\2\2")
-        buf.write(u"F\u0162\3\2\2\2H\u016b\3\2\2\2J\u0171\3\2\2\2L\u017b")
-        buf.write(u"\3\2\2\2N\u0180\3\2\2\2P\u0184\3\2\2\2RT\5\6\4\2SU\5")
-        buf.write(u"$\23\2TS\3\2\2\2TU\3\2\2\2UW\3\2\2\2VX\5\"\22\2WV\3\2")
-        buf.write(u"\2\2WX\3\2\2\2X\\\3\2\2\2Y[\5\n\6\2ZY\3\2\2\2[^\3\2\2")
-        buf.write(u"\2\\Z\3\2\2\2\\]\3\2\2\2]\3\3\2\2\2^\\\3\2\2\2_`\7\3")
-        buf.write(u"\2\2`a\7@\2\2ab\7\4\2\2bc\5\b\5\2cd\7\5\2\2d\5\3\2\2")
-        buf.write(u"\2ef\7\6\2\2fg\7@\2\2gh\7\7\2\2hi\7\5\2\2i\7\3\2\2\2")
-        buf.write(u"jk\7@\2\2k\t\3\2\2\2lm\7.\2\2mn\7@\2\2np\7\b\2\2oq\5")
-        buf.write(u"&\24\2po\3\2\2\2pq\3\2\2\2qr\3\2\2\2rs\7\t\2\2st\7\5")
-        buf.write(u"\2\2tv\5 \21\2uw\5\"\22\2vu\3\2\2\2vw\3\2\2\2wx\3\2\2")
-        buf.write(u"\2xy\5\16\b\2y\13\3\2\2\2z~\7;\2\2{}\5\16\b\2|{\3\2\2")
-        buf.write(u"\2}\u0080\3\2\2\2~|\3\2\2\2~\177\3\2\2\2\177\u0081\3")
-        buf.write(u"\2\2\2\u0080~\3\2\2\2\u0081\u0082\7<\2\2\u0082\r\3\2")
-        buf.write(u"\2\2\u0083\u008a\5\22\n\2\u0084\u008a\5\24\13\2\u0085")
-        buf.write(u"\u008a\5B\"\2\u0086\u008a\5\f\7\2\u0087\u008a\5> \2\u0088")
-        buf.write(u"\u008a\5@!\2\u0089\u0083\3\2\2\2\u0089\u0084\3\2\2\2")
-        buf.write(u"\u0089\u0085\3\2\2\2\u0089\u0086\3\2\2\2\u0089\u0087")
-        buf.write(u"\3\2\2\2\u0089\u0088\3\2\2\2\u008a\u008b\3\2\2\2\u008b")
-        buf.write(u"\u008c\7\5\2\2\u008c\u0091\3\2\2\2\u008d\u0091\5\64\33")
-        buf.write(u"\2\u008e\u0091\5\66\34\2\u008f\u0091\58\35\2\u0090\u0089")
-        buf.write(u"\3\2\2\2\u0090\u008d\3\2\2\2\u0090\u008e\3\2\2\2\u0090")
-        buf.write(u"\u008f\3\2\2\2\u0091\17\3\2\2\2\u0092\u009b\5\22\n\2")
-        buf.write(u"\u0093\u009b\5\24\13\2\u0094\u009b\5B\"\2\u0095\u009b")
-        buf.write(u"\5\f\7\2\u0096\u009b\5> \2\u0097\u009b\5\64\33\2\u0098")
-        buf.write(u"\u009b\5\66\34\2\u0099\u009b\58\35\2\u009a\u0092\3\2")
-        buf.write(u"\2\2\u009a\u0093\3\2\2\2\u009a\u0094\3\2\2\2\u009a\u0095")
-        buf.write(u"\3\2\2\2\u009a\u0096\3\2\2\2\u009a\u0097\3\2\2\2\u009a")
-        buf.write(u"\u0098\3\2\2\2\u009a\u0099\3\2\2\2\u009b\21\3\2\2\2\u009c")
-        buf.write(u"\u009d\5J&\2\u009d\u009e\t\2\2\2\u009e\u009f\5\34\17")
-        buf.write(u"\2\u009f\23\3\2\2\2\u00a0\u00a1\7@\2\2\u00a1\u00a2\7")
-        buf.write(u"\b\2\2\u00a2\u00a3\5\36\20\2\u00a3\u00a4\7\t\2\2\u00a4")
-        buf.write(u"\25\3\2\2\2\u00a5\u00a6\5J&\2\u00a6\u00a7\7\n\2\2\u00a7")
-        buf.write(u"\u00a8\5\30\r\2\u00a8\u00a9\7\13\2\2\u00a9\u00aa\5\32")
-        buf.write(u"\16\2\u00aa\u00ab\7\f\2\2\u00ab\27\3\2\2\2\u00ac\u00af")
-        buf.write(u"\7%\2\2\u00ad\u00af\5\34\17\2\u00ae\u00ac\3\2\2\2\u00ae")
-        buf.write(u"\u00ad\3\2\2\2\u00af\31\3\2\2\2\u00b0\u00b3\7%\2\2\u00b1")
-        buf.write(u"\u00b3\5\34\17\2\u00b2\u00b0\3\2\2\2\u00b2\u00b1\3\2")
-        buf.write(u"\2\2\u00b3\33\3\2\2\2\u00b4\u00b5\b\17\1\2\u00b5\u00b6")
-        buf.write(u"\7\62\2\2\u00b6\u00c6\5\34\17\t\u00b7\u00c6\7%\2\2\u00b8")
-        buf.write(u"\u00c6\t\3\2\2\u00b9\u00c6\5\24\13\2\u00ba\u00c6\5\26")
-        buf.write(u"\f\2\u00bb\u00bc\7\"\2\2\u00bc\u00bd\7\b\2\2\u00bd\u00be")
-        buf.write(u"\5\36\20\2\u00be\u00bf\7\t\2\2\u00bf\u00c6\3\2\2\2\u00c0")
-        buf.write(u"\u00c1\7\b\2\2\u00c1\u00c2\5\34\17\2\u00c2\u00c3\7\t")
-        buf.write(u"\2\2\u00c3\u00c6\3\2\2\2\u00c4\u00c6\5J&\2\u00c5\u00b4")
-        buf.write(u"\3\2\2\2\u00c5\u00b7\3\2\2\2\u00c5\u00b8\3\2\2\2\u00c5")
-        buf.write(u"\u00b9\3\2\2\2\u00c5\u00ba\3\2\2\2\u00c5\u00bb\3\2\2")
-        buf.write(u"\2\u00c5\u00c0\3\2\2\2\u00c5\u00c4\3\2\2\2\u00c6\u00d5")
-        buf.write(u"\3\2\2\2\u00c7\u00c8\f\16\2\2\u00c8\u00c9\t\4\2\2\u00c9")
-        buf.write(u"\u00d4\5\34\17\17\u00ca\u00cb\f\r\2\2\u00cb\u00cc\t\5")
-        buf.write(u"\2\2\u00cc\u00d4\5\34\17\16\u00cd\u00ce\f\f\2\2\u00ce")
-        buf.write(u"\u00cf\t\6\2\2\u00cf\u00d4\5\34\17\r\u00d0\u00d1\f\13")
-        buf.write(u"\2\2\u00d1\u00d2\t\7\2\2\u00d2\u00d4\5\34\17\f\u00d3")
-        buf.write(u"\u00c7\3\2\2\2\u00d3\u00ca\3\2\2\2\u00d3\u00cd\3\2\2")
-        buf.write(u"\2\u00d3\u00d0\3\2\2\2\u00d4\u00d7\3\2\2\2\u00d5\u00d3")
-        buf.write(u"\3\2\2\2\u00d5\u00d6\3\2\2\2\u00d6\35\3\2\2\2\u00d7\u00d5")
-        buf.write(u"\3\2\2\2\u00d8\u00dd\5\34\17\2\u00d9\u00da\7#\2\2\u00da")
-        buf.write(u"\u00dc\5\34\17\2\u00db\u00d9\3\2\2\2\u00dc\u00df\3\2")
-        buf.write(u"\2\2\u00dd\u00db\3\2\2\2\u00dd\u00de\3\2\2\2\u00de\u00e1")
-        buf.write(u"\3\2\2\2\u00df\u00dd\3\2\2\2\u00e0\u00d8\3\2\2\2\u00e0")
-        buf.write(u"\u00e1\3\2\2\2\u00e1\37\3\2\2\2\u00e2\u00e3\7\3\2\2\u00e3")
-        buf.write(u"\u00e4\7@\2\2\u00e4\u00e5\7\5\2\2\u00e5!\3\2\2\2\u00e6")
-        buf.write(u"\u00ea\7(\2\2\u00e7\u00e9\5(\25\2\u00e8\u00e7\3\2\2\2")
-        buf.write(u"\u00e9\u00ec\3\2\2\2\u00ea\u00e8\3\2\2\2\u00ea\u00eb")
-        buf.write(u"\3\2\2\2\u00eb#\3\2\2\2\u00ec\u00ea\3\2\2\2\u00ed\u00f1")
-        buf.write(u"\7)\2\2\u00ee\u00f0\5*\26\2\u00ef\u00ee\3\2\2\2\u00f0")
-        buf.write(u"\u00f3\3\2\2\2\u00f1\u00ef\3\2\2\2\u00f1\u00f2\3\2\2")
-        buf.write(u"\2\u00f2%\3\2\2\2\u00f3\u00f1\3\2\2\2\u00f4\u00f9\5,")
-        buf.write(u"\27\2\u00f5\u00f6\7#\2\2\u00f6\u00f8\5,\27\2\u00f7\u00f5")
-        buf.write(u"\3\2\2\2\u00f8\u00fb\3\2\2\2\u00f9\u00f7\3\2\2\2\u00f9")
-        buf.write(u"\u00fa\3\2\2\2\u00fa\u00fd\3\2\2\2\u00fb\u00f9\3\2\2")
-        buf.write(u"\2\u00fc\u00f4\3\2\2\2\u00fc\u00fd\3\2\2\2\u00fd\u00fe")
-        buf.write(u"\3\2\2\2\u00fe\u00ff\7$\2\2\u00ff\u0100\5.\30\2\u0100")
-        buf.write(u"\'\3\2\2\2\u0101\u0106\5,\27\2\u0102\u0103\7#\2\2\u0103")
-        buf.write(u"\u0105\5,\27\2\u0104\u0102\3\2\2\2\u0105\u0108\3\2\2")
-        buf.write(u"\2\u0106\u0104\3\2\2\2\u0106\u0107\3\2\2\2\u0107\u010a")
-        buf.write(u"\3\2\2\2\u0108\u0106\3\2\2\2\u0109\u0101\3\2\2\2\u0109")
-        buf.write(u"\u010a\3\2\2\2\u010a\u010b\3\2\2\2\u010b\u010c\7$\2\2")
-        buf.write(u"\u010c\u010d\5.\30\2\u010d\u010e\7\5\2\2\u010e)\3\2\2")
-        buf.write(u"\2\u010f\u0110\5,\27\2\u0110\u0111\7\27\2\2\u0111\u0112")
-        buf.write(u"\7%\2\2\u0112\u0113\7\5\2\2\u0113+\3\2\2\2\u0114\u0115")
-        buf.write(u"\7@\2\2\u0115-\3\2\2\2\u0116\u0118\5\60\31\2\u0117\u0116")
-        buf.write(u"\3\2\2\2\u0117\u0118\3\2\2\2\u0118\u0119\3\2\2\2\u0119")
-        buf.write(u"\u011a\7@\2\2\u011a/\3\2\2\2\u011b\u011c\7&\2\2\u011c")
-        buf.write(u"\u011d\7\n\2\2\u011d\u011e\7%\2\2\u011e\u011f\7\f\2\2")
-        buf.write(u"\u011f\u0120\7\'\2\2\u0120\61\3\2\2\2\u0121\u0122\5\64")
-        buf.write(u"\33\2\u0122\63\3\2\2\2\u0123\u0124\7*\2\2\u0124\u0125")
-        buf.write(u"\5\34\17\2\u0125\u0126\7,\2\2\u0126\u012a\5\20\t\2\u0127")
-        buf.write(u"\u012b\7\5\2\2\u0128\u0129\7+\2\2\u0129\u012b\5:\36\2")
-        buf.write(u"\u012a\u0127\3\2\2\2\u012a\u0128\3\2\2\2\u012a\u012b")
-        buf.write(u"\3\2\2\2\u012b\65\3\2\2\2\u012c\u012d\7\64\2\2\u012d")
-        buf.write(u"\u012e\7\b\2\2\u012e\u012f\5J&\2\u012f\u0130\7#\2\2\u0130")
-        buf.write(u"\u0131\5J&\2\u0131\u0132\7\t\2\2\u0132\u0133\7/\2\2\u0133")
-        buf.write(u"\u0134\5\16\b\2\u0134\67\3\2\2\2\u0135\u0136\7\65\2\2")
-        buf.write(u"\u0136\u0137\7\b\2\2\u0137\u0138\7%\2\2\u0138\u0139\7")
-        buf.write(u"\t\2\2\u0139\u013a\7/\2\2\u013a\u013b\5\16\b\2\u013b")
-        buf.write(u"9\3\2\2\2\u013c\u013d\5\16\b\2\u013d;\3\2\2\2\u013e\u0141")
-        buf.write(u"\7/\2\2\u013f\u0140\7\67\2\2\u0140\u0142\5\34\17\2\u0141")
-        buf.write(u"\u013f\3\2\2\2\u0141\u0142\3\2\2\2\u0142\u0143\3\2\2")
-        buf.write(u"\2\u0143\u0144\5\16\b\2\u0144\u0147\78\2\2\u0145\u0146")
-        buf.write(u"\7\67\2\2\u0146\u0148\5\34\17\2\u0147\u0145\3\2\2\2\u0147")
-        buf.write(u"\u0148\3\2\2\2\u0148=\3\2\2\2\u0149\u014a\7\61\2\2\u014a")
-        buf.write(u"\u014b\7@\2\2\u014b\u014c\7=\2\2\u014c\u014d\5\34\17")
-        buf.write(u"\2\u014d\u014e\7\60\2\2\u014e\u014f\5\34\17\2\u014f\u0152")
-        buf.write(u"\7/\2\2\u0150\u0153\5\f\7\2\u0151\u0153\5\16\b\2\u0152")
-        buf.write(u"\u0150\3\2\2\2\u0152\u0151\3\2\2\2\u0153?\3\2\2\2\u0154")
-        buf.write(u"\u0155\7\63\2\2\u0155A\3\2\2\2\u0156\u0158\79\2\2\u0157")
-        buf.write(u"\u0159\5\34\17\2\u0158\u0157\3\2\2\2\u0158\u0159\3\2")
-        buf.write(u"\2\2\u0159C\3\2\2\2\u015a\u015b\5J&\2\u015b\u015c\5J")
-        buf.write(u"&\2\u015c\u015e\5F$\2\u015d\u015f\5\"\22\2\u015e\u015d")
-        buf.write(u"\3\2\2\2\u015e\u015f\3\2\2\2\u015f\u0160\3\2\2\2\u0160")
-        buf.write(u"\u0161\5\f\7\2\u0161E\3\2\2\2\u0162\u0166\7\b\2\2\u0163")
-        buf.write(u"\u0165\5H%\2\u0164\u0163\3\2\2\2\u0165\u0168\3\2\2\2")
-        buf.write(u"\u0166\u0164\3\2\2\2\u0166\u0167\3\2\2\2\u0167\u0169")
-        buf.write(u"\3\2\2\2\u0168\u0166\3\2\2\2\u0169\u016a\7\t\2\2\u016a")
-        buf.write(u"G\3\2\2\2\u016b\u016c\5.\30\2\u016c\u016f\5J&\2\u016d")
-        buf.write(u"\u016e\7=\2\2\u016e\u0170\5\34\17\2\u016f\u016d\3\2\2")
-        buf.write(u"\2\u016f\u0170\3\2\2\2\u0170I\3\2\2\2\u0171\u0173\7@")
-        buf.write(u"\2\2\u0172\u0174\5N(\2\u0173\u0172\3\2\2\2\u0173\u0174")
-        buf.write(u"\3\2\2\2\u0174\u0178\3\2\2\2\u0175\u0177\5L\'\2\u0176")
-        buf.write(u"\u0175\3\2\2\2\u0177\u017a\3\2\2\2\u0178\u0176\3\2\2")
-        buf.write(u"\2\u0178\u0179\3\2\2\2\u0179K\3\2\2\2\u017a\u0178\3\2")
-        buf.write(u"\2\2\u017b\u017c\7\4\2\2\u017c\u017e\7@\2\2\u017d\u017f")
-        buf.write(u"\5N(\2\u017e\u017d\3\2\2\2\u017e\u017f\3\2\2\2\u017f")
-        buf.write(u"M\3\2\2\2\u0180\u0181\7\n\2\2\u0181\u0182\5\34\17\2\u0182")
-        buf.write(u"\u0183\7\f\2\2\u0183O\3\2\2\2\u0184\u0185\t\b\2\2\u0185")
-        buf.write(u"Q\3\2\2\2$TW\\pv~\u0089\u0090\u009a\u00ae\u00b2\u00c5")
-        buf.write(u"\u00d3\u00d5\u00dd\u00e0\u00ea\u00f1\u00f9\u00fc\u0106")
-        buf.write(u"\u0109\u0117\u012a\u0141\u0147\u0152\u0158\u015e\u0166")
-        buf.write(u"\u016f\u0173\u0178\u017e")
+        buf.write(u"\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\3\2\3")
+        buf.write(u"\2\5\2Y\n\2\3\2\5\2\\\n\2\3\2\7\2_\n\2\f\2\16\2b\13\2")
+        buf.write(u"\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3\5\3\5")
+        buf.write(u"\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6y\n\6\3\6\3\6\3\7")
+        buf.write(u"\3\7\7\7\177\n\7\f\7\16\7\u0082\13\7\3\7\3\7\3\b\3\b")
+        buf.write(u"\3\b\3\b\3\b\3\b\5\b\u008c\n\b\3\b\3\b\3\b\3\b\3\b\5")
+        buf.write(u"\b\u0093\n\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\5\t\u009d")
+        buf.write(u"\n\t\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13\3\13\3\f\3\f")
+        buf.write(u"\3\f\3\f\3\f\3\f\3\f\3\r\3\r\5\r\u00b1\n\r\3\16\3\16")
+        buf.write(u"\5\16\u00b5\n\16\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3")
+        buf.write(u"\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\5\17")
+        buf.write(u"\u00c8\n\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3")
+        buf.write(u"\17\3\17\3\17\3\17\7\17\u00d6\n\17\f\17\16\17\u00d9\13")
+        buf.write(u"\17\3\20\3\20\3\20\7\20\u00de\n\20\f\20\16\20\u00e1\13")
+        buf.write(u"\20\5\20\u00e3\n\20\3\21\3\21\3\21\3\21\3\22\3\22\7\22")
+        buf.write(u"\u00eb\n\22\f\22\16\22\u00ee\13\22\3\23\3\23\7\23\u00f2")
+        buf.write(u"\n\23\f\23\16\23\u00f5\13\23\3\24\3\24\3\24\7\24\u00fa")
+        buf.write(u"\n\24\f\24\16\24\u00fd\13\24\5\24\u00ff\n\24\3\25\3\25")
+        buf.write(u"\3\25\7\25\u0104\n\25\f\25\16\25\u0107\13\25\5\25\u0109")
+        buf.write(u"\n\25\3\25\3\25\3\25\3\26\3\26\3\26\7\26\u0111\n\26\f")
+        buf.write(u"\26\16\26\u0114\13\26\5\26\u0116\n\26\3\26\3\26\3\26")
+        buf.write(u"\3\26\3\27\3\27\3\27\3\27\3\27\3\30\3\30\3\31\5\31\u0124")
+        buf.write(u"\n\31\3\31\3\31\3\32\3\32\3\32\3\32\3\32\3\32\3\33\3")
+        buf.write(u"\33\3\34\3\34\3\34\3\34\3\34\3\34\3\34\5\34\u0137\n\34")
+        buf.write(u"\3\35\3\35\3\35\3\35\3\35\3\35\3\35\3\35\3\35\3\36\3")
+        buf.write(u"\36\3\36\3\36\3\36\3\36\3\36\3\37\3\37\3 \3 \3 \5 \u014e")
+        buf.write(u"\n \3 \3 \3 \3 \5 \u0154\n \3!\3!\3!\3!\3!\3!\3!\3!\3")
+        buf.write(u"!\5!\u015f\n!\3\"\3\"\3#\3#\5#\u0165\n#\3$\3$\3$\3$\5")
+        buf.write(u"$\u016b\n$\3$\3$\3%\3%\7%\u0171\n%\f%\16%\u0174\13%\3")
+        buf.write(u"%\3%\3&\3&\3&\3&\5&\u017c\n&\3\'\3\'\5\'\u0180\n\'\3")
+        buf.write(u"\'\7\'\u0183\n\'\f\'\16\'\u0186\13\'\3\'\7\'\u0189\n")
+        buf.write(u"\'\f\'\16\'\u018c\13\'\3(\3(\3(\3)\3)\3)\5)\u0194\n)")
+        buf.write(u"\3*\3*\3*\3*\3+\3+\3+\2\3\34,\2\4\6\b\n\f\16\20\22\24")
+        buf.write(u"\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPRT\2")
+        buf.write(u"\t\3\2=?\3\2\32!\3\2\r\16\3\2\17\20\3\2\21\22\3\2\23")
+        buf.write(u"\31\3\2CE\u01aa\2V\3\2\2\2\4c\3\2\2\2\6i\3\2\2\2\bn\3")
+        buf.write(u"\2\2\2\np\3\2\2\2\f|\3\2\2\2\16\u0092\3\2\2\2\20\u009c")
+        buf.write(u"\3\2\2\2\22\u009e\3\2\2\2\24\u00a2\3\2\2\2\26\u00a7\3")
+        buf.write(u"\2\2\2\30\u00b0\3\2\2\2\32\u00b4\3\2\2\2\34\u00c7\3\2")
+        buf.write(u"\2\2\36\u00e2\3\2\2\2 \u00e4\3\2\2\2\"\u00e8\3\2\2\2")
+        buf.write(u"$\u00ef\3\2\2\2&\u00fe\3\2\2\2(\u0108\3\2\2\2*\u0115")
+        buf.write(u"\3\2\2\2,\u011b\3\2\2\2.\u0120\3\2\2\2\60\u0123\3\2\2")
+        buf.write(u"\2\62\u0127\3\2\2\2\64\u012d\3\2\2\2\66\u012f\3\2\2\2")
+        buf.write(u"8\u0138\3\2\2\2:\u0141\3\2\2\2<\u0148\3\2\2\2>\u014a")
+        buf.write(u"\3\2\2\2@\u0155\3\2\2\2B\u0160\3\2\2\2D\u0162\3\2\2\2")
+        buf.write(u"F\u0166\3\2\2\2H\u016e\3\2\2\2J\u0177\3\2\2\2L\u017d")
+        buf.write(u"\3\2\2\2N\u018d\3\2\2\2P\u0190\3\2\2\2R\u0195\3\2\2\2")
+        buf.write(u"T\u0199\3\2\2\2VX\5\6\4\2WY\5$\23\2XW\3\2\2\2XY\3\2\2")
+        buf.write(u"\2Y[\3\2\2\2Z\\\5\"\22\2[Z\3\2\2\2[\\\3\2\2\2\\`\3\2")
+        buf.write(u"\2\2]_\5\n\6\2^]\3\2\2\2_b\3\2\2\2`^\3\2\2\2`a\3\2\2")
+        buf.write(u"\2a\3\3\2\2\2b`\3\2\2\2cd\7\3\2\2de\7@\2\2ef\7\4\2\2")
+        buf.write(u"fg\5\b\5\2gh\7\5\2\2h\5\3\2\2\2ij\7\6\2\2jk\7@\2\2kl")
+        buf.write(u"\7\7\2\2lm\7\5\2\2m\7\3\2\2\2no\5L\'\2o\t\3\2\2\2pq\7")
+        buf.write(u".\2\2qr\7@\2\2rs\7\b\2\2st\5&\24\2tu\7\t\2\2uv\7\5\2")
+        buf.write(u"\2vx\5 \21\2wy\5\"\22\2xw\3\2\2\2xy\3\2\2\2yz\3\2\2\2")
+        buf.write(u"z{\5\16\b\2{\13\3\2\2\2|\u0080\7;\2\2}\177\5\16\b\2~")
+        buf.write(u"}\3\2\2\2\177\u0082\3\2\2\2\u0080~\3\2\2\2\u0080\u0081")
+        buf.write(u"\3\2\2\2\u0081\u0083\3\2\2\2\u0082\u0080\3\2\2\2\u0083")
+        buf.write(u"\u0084\7<\2\2\u0084\r\3\2\2\2\u0085\u008c\5\22\n\2\u0086")
+        buf.write(u"\u008c\5\24\13\2\u0087\u008c\5D#\2\u0088\u008c\5\f\7")
+        buf.write(u"\2\u0089\u008c\5@!\2\u008a\u008c\5B\"\2\u008b\u0085\3")
+        buf.write(u"\2\2\2\u008b\u0086\3\2\2\2\u008b\u0087\3\2\2\2\u008b")
+        buf.write(u"\u0088\3\2\2\2\u008b\u0089\3\2\2\2\u008b\u008a\3\2\2")
+        buf.write(u"\2\u008c\u008d\3\2\2\2\u008d\u008e\7\5\2\2\u008e\u0093")
+        buf.write(u"\3\2\2\2\u008f\u0093\5\66\34\2\u0090\u0093\58\35\2\u0091")
+        buf.write(u"\u0093\5:\36\2\u0092\u008b\3\2\2\2\u0092\u008f\3\2\2")
+        buf.write(u"\2\u0092\u0090\3\2\2\2\u0092\u0091\3\2\2\2\u0093\17\3")
+        buf.write(u"\2\2\2\u0094\u009d\5\22\n\2\u0095\u009d\5\24\13\2\u0096")
+        buf.write(u"\u009d\5D#\2\u0097\u009d\5\f\7\2\u0098\u009d\5@!\2\u0099")
+        buf.write(u"\u009d\5\66\34\2\u009a\u009d\58\35\2\u009b\u009d\5:\36")
+        buf.write(u"\2\u009c\u0094\3\2\2\2\u009c\u0095\3\2\2\2\u009c\u0096")
+        buf.write(u"\3\2\2\2\u009c\u0097\3\2\2\2\u009c\u0098\3\2\2\2\u009c")
+        buf.write(u"\u0099\3\2\2\2\u009c\u009a\3\2\2\2\u009c\u009b\3\2\2")
+        buf.write(u"\2\u009d\21\3\2\2\2\u009e\u009f\5L\'\2\u009f\u00a0\t")
+        buf.write(u"\2\2\2\u00a0\u00a1\5\34\17\2\u00a1\23\3\2\2\2\u00a2\u00a3")
+        buf.write(u"\7@\2\2\u00a3\u00a4\7\b\2\2\u00a4\u00a5\5\36\20\2\u00a5")
+        buf.write(u"\u00a6\7\t\2\2\u00a6\25\3\2\2\2\u00a7\u00a8\5L\'\2\u00a8")
+        buf.write(u"\u00a9\7\n\2\2\u00a9\u00aa\5\30\r\2\u00aa\u00ab\7\13")
+        buf.write(u"\2\2\u00ab\u00ac\5\32\16\2\u00ac\u00ad\7\f\2\2\u00ad")
+        buf.write(u"\27\3\2\2\2\u00ae\u00b1\7%\2\2\u00af\u00b1\5\34\17\2")
+        buf.write(u"\u00b0\u00ae\3\2\2\2\u00b0\u00af\3\2\2\2\u00b1\31\3\2")
+        buf.write(u"\2\2\u00b2\u00b5\7%\2\2\u00b3\u00b5\5\34\17\2\u00b4\u00b2")
+        buf.write(u"\3\2\2\2\u00b4\u00b3\3\2\2\2\u00b5\33\3\2\2\2\u00b6\u00b7")
+        buf.write(u"\b\17\1\2\u00b7\u00b8\7\62\2\2\u00b8\u00c8\5\34\17\t")
+        buf.write(u"\u00b9\u00c8\7%\2\2\u00ba\u00c8\t\3\2\2\u00bb\u00c8\5")
+        buf.write(u"\24\13\2\u00bc\u00c8\5\26\f\2\u00bd\u00be\7\"\2\2\u00be")
+        buf.write(u"\u00bf\7\b\2\2\u00bf\u00c0\5\36\20\2\u00c0\u00c1\7\t")
+        buf.write(u"\2\2\u00c1\u00c8\3\2\2\2\u00c2\u00c3\7\b\2\2\u00c3\u00c4")
+        buf.write(u"\5\34\17\2\u00c4\u00c5\7\t\2\2\u00c5\u00c8\3\2\2\2\u00c6")
+        buf.write(u"\u00c8\5L\'\2\u00c7\u00b6\3\2\2\2\u00c7\u00b9\3\2\2\2")
+        buf.write(u"\u00c7\u00ba\3\2\2\2\u00c7\u00bb\3\2\2\2\u00c7\u00bc")
+        buf.write(u"\3\2\2\2\u00c7\u00bd\3\2\2\2\u00c7\u00c2\3\2\2\2\u00c7")
+        buf.write(u"\u00c6\3\2\2\2\u00c8\u00d7\3\2\2\2\u00c9\u00ca\f\16\2")
+        buf.write(u"\2\u00ca\u00cb\t\4\2\2\u00cb\u00d6\5\34\17\17\u00cc\u00cd")
+        buf.write(u"\f\r\2\2\u00cd\u00ce\t\5\2\2\u00ce\u00d6\5\34\17\16\u00cf")
+        buf.write(u"\u00d0\f\f\2\2\u00d0\u00d1\t\6\2\2\u00d1\u00d6\5\34\17")
+        buf.write(u"\r\u00d2\u00d3\f\13\2\2\u00d3\u00d4\t\7\2\2\u00d4\u00d6")
+        buf.write(u"\5\34\17\f\u00d5\u00c9\3\2\2\2\u00d5\u00cc\3\2\2\2\u00d5")
+        buf.write(u"\u00cf\3\2\2\2\u00d5\u00d2\3\2\2\2\u00d6\u00d9\3\2\2")
+        buf.write(u"\2\u00d7\u00d5\3\2\2\2\u00d7\u00d8\3\2\2\2\u00d8\35\3")
+        buf.write(u"\2\2\2\u00d9\u00d7\3\2\2\2\u00da\u00df\5\34\17\2\u00db")
+        buf.write(u"\u00dc\7#\2\2\u00dc\u00de\5\34\17\2\u00dd\u00db\3\2\2")
+        buf.write(u"\2\u00de\u00e1\3\2\2\2\u00df\u00dd\3\2\2\2\u00df\u00e0")
+        buf.write(u"\3\2\2\2\u00e0\u00e3\3\2\2\2\u00e1\u00df\3\2\2\2\u00e2")
+        buf.write(u"\u00da\3\2\2\2\u00e2\u00e3\3\2\2\2\u00e3\37\3\2\2\2\u00e4")
+        buf.write(u"\u00e5\7\3\2\2\u00e5\u00e6\5L\'\2\u00e6\u00e7\7\5\2\2")
+        buf.write(u"\u00e7!\3\2\2\2\u00e8\u00ec\7(\2\2\u00e9\u00eb\5*\26")
+        buf.write(u"\2\u00ea\u00e9\3\2\2\2\u00eb\u00ee\3\2\2\2\u00ec\u00ea")
+        buf.write(u"\3\2\2\2\u00ec\u00ed\3\2\2\2\u00ed#\3\2\2\2\u00ee\u00ec")
+        buf.write(u"\3\2\2\2\u00ef\u00f3\7)\2\2\u00f0\u00f2\5,\27\2\u00f1")
+        buf.write(u"\u00f0\3\2\2\2\u00f2\u00f5\3\2\2\2\u00f3\u00f1\3\2\2")
+        buf.write(u"\2\u00f3\u00f4\3\2\2\2\u00f4%\3\2\2\2\u00f5\u00f3\3\2")
+        buf.write(u"\2\2\u00f6\u00fb\5(\25\2\u00f7\u00f8\7\5\2\2\u00f8\u00fa")
+        buf.write(u"\5(\25\2\u00f9\u00f7\3\2\2\2\u00fa\u00fd\3\2\2\2\u00fb")
+        buf.write(u"\u00f9\3\2\2\2\u00fb\u00fc\3\2\2\2\u00fc\u00ff\3\2\2")
+        buf.write(u"\2\u00fd\u00fb\3\2\2\2\u00fe\u00f6\3\2\2\2\u00fe\u00ff")
+        buf.write(u"\3\2\2\2\u00ff\'\3\2\2\2\u0100\u0105\5.\30\2\u0101\u0102")
+        buf.write(u"\7#\2\2\u0102\u0104\5.\30\2\u0103\u0101\3\2\2\2\u0104")
+        buf.write(u"\u0107\3\2\2\2\u0105\u0103\3\2\2\2\u0105\u0106\3\2\2")
+        buf.write(u"\2\u0106\u0109\3\2\2\2\u0107\u0105\3\2\2\2\u0108\u0100")
+        buf.write(u"\3\2\2\2\u0108\u0109\3\2\2\2\u0109\u010a\3\2\2\2\u010a")
+        buf.write(u"\u010b\7$\2\2\u010b\u010c\5\60\31\2\u010c)\3\2\2\2\u010d")
+        buf.write(u"\u0112\5.\30\2\u010e\u010f\7#\2\2\u010f\u0111\5.\30\2")
+        buf.write(u"\u0110\u010e\3\2\2\2\u0111\u0114\3\2\2\2\u0112\u0110")
+        buf.write(u"\3\2\2\2\u0112\u0113\3\2\2\2\u0113\u0116\3\2\2\2\u0114")
+        buf.write(u"\u0112\3\2\2\2\u0115\u010d\3\2\2\2\u0115\u0116\3\2\2")
+        buf.write(u"\2\u0116\u0117\3\2\2\2\u0117\u0118\7$\2\2\u0118\u0119")
+        buf.write(u"\5\60\31\2\u0119\u011a\7\5\2\2\u011a+\3\2\2\2\u011b\u011c")
+        buf.write(u"\5.\30\2\u011c\u011d\7\27\2\2\u011d\u011e\7%\2\2\u011e")
+        buf.write(u"\u011f\7\5\2\2\u011f-\3\2\2\2\u0120\u0121\7@\2\2\u0121")
+        buf.write(u"/\3\2\2\2\u0122\u0124\5\62\32\2\u0123\u0122\3\2\2\2\u0123")
+        buf.write(u"\u0124\3\2\2\2\u0124\u0125\3\2\2\2\u0125\u0126\7@\2\2")
+        buf.write(u"\u0126\61\3\2\2\2\u0127\u0128\7&\2\2\u0128\u0129\7\n")
+        buf.write(u"\2\2\u0129\u012a\7%\2\2\u012a\u012b\7\f\2\2\u012b\u012c")
+        buf.write(u"\7\'\2\2\u012c\63\3\2\2\2\u012d\u012e\5\66\34\2\u012e")
+        buf.write(u"\65\3\2\2\2\u012f\u0130\7*\2\2\u0130\u0131\5\34\17\2")
+        buf.write(u"\u0131\u0132\7,\2\2\u0132\u0136\5\20\t\2\u0133\u0137")
+        buf.write(u"\7\5\2\2\u0134\u0135\7+\2\2\u0135\u0137\5<\37\2\u0136")
+        buf.write(u"\u0133\3\2\2\2\u0136\u0134\3\2\2\2\u0136\u0137\3\2\2")
+        buf.write(u"\2\u0137\67\3\2\2\2\u0138\u0139\7\64\2\2\u0139\u013a")
+        buf.write(u"\7\b\2\2\u013a\u013b\5L\'\2\u013b\u013c\7#\2\2\u013c")
+        buf.write(u"\u013d\5L\'\2\u013d\u013e\7\t\2\2\u013e\u013f\7/\2\2")
+        buf.write(u"\u013f\u0140\5\16\b\2\u01409\3\2\2\2\u0141\u0142\7\65")
+        buf.write(u"\2\2\u0142\u0143\7\b\2\2\u0143\u0144\7%\2\2\u0144\u0145")
+        buf.write(u"\7\t\2\2\u0145\u0146\7/\2\2\u0146\u0147\5\16\b\2\u0147")
+        buf.write(u";\3\2\2\2\u0148\u0149\5\16\b\2\u0149=\3\2\2\2\u014a\u014d")
+        buf.write(u"\7/\2\2\u014b\u014c\7\67\2\2\u014c\u014e\5\34\17\2\u014d")
+        buf.write(u"\u014b\3\2\2\2\u014d\u014e\3\2\2\2\u014e\u014f\3\2\2")
+        buf.write(u"\2\u014f\u0150\5\16\b\2\u0150\u0153\78\2\2\u0151\u0152")
+        buf.write(u"\7\67\2\2\u0152\u0154\5\34\17\2\u0153\u0151\3\2\2\2\u0153")
+        buf.write(u"\u0154\3\2\2\2\u0154?\3\2\2\2\u0155\u0156\7\61\2\2\u0156")
+        buf.write(u"\u0157\7@\2\2\u0157\u0158\7=\2\2\u0158\u0159\5\34\17")
+        buf.write(u"\2\u0159\u015a\7\60\2\2\u015a\u015b\5\34\17\2\u015b\u015e")
+        buf.write(u"\7/\2\2\u015c\u015f\5\f\7\2\u015d\u015f\5\16\b\2\u015e")
+        buf.write(u"\u015c\3\2\2\2\u015e\u015d\3\2\2\2\u015fA\3\2\2\2\u0160")
+        buf.write(u"\u0161\7\63\2\2\u0161C\3\2\2\2\u0162\u0164\79\2\2\u0163")
+        buf.write(u"\u0165\5\34\17\2\u0164\u0163\3\2\2\2\u0164\u0165\3\2")
+        buf.write(u"\2\2\u0165E\3\2\2\2\u0166\u0167\5L\'\2\u0167\u0168\5")
+        buf.write(u"L\'\2\u0168\u016a\5H%\2\u0169\u016b\5\"\22\2\u016a\u0169")
+        buf.write(u"\3\2\2\2\u016a\u016b\3\2\2\2\u016b\u016c\3\2\2\2\u016c")
+        buf.write(u"\u016d\5\f\7\2\u016dG\3\2\2\2\u016e\u0172\7\b\2\2\u016f")
+        buf.write(u"\u0171\5J&\2\u0170\u016f\3\2\2\2\u0171\u0174\3\2\2\2")
+        buf.write(u"\u0172\u0170\3\2\2\2\u0172\u0173\3\2\2\2\u0173\u0175")
+        buf.write(u"\3\2\2\2\u0174\u0172\3\2\2\2\u0175\u0176\7\t\2\2\u0176")
+        buf.write(u"I\3\2\2\2\u0177\u0178\5\60\31\2\u0178\u017b\5L\'\2\u0179")
+        buf.write(u"\u017a\7=\2\2\u017a\u017c\5\34\17\2\u017b\u0179\3\2\2")
+        buf.write(u"\2\u017b\u017c\3\2\2\2\u017cK\3\2\2\2\u017d\u017f\7@")
+        buf.write(u"\2\2\u017e\u0180\5R*\2\u017f\u017e\3\2\2\2\u017f\u0180")
+        buf.write(u"\3\2\2\2\u0180\u0184\3\2\2\2\u0181\u0183\5N(\2\u0182")
+        buf.write(u"\u0181\3\2\2\2\u0183\u0186\3\2\2\2\u0184\u0182\3\2\2")
+        buf.write(u"\2\u0184\u0185\3\2\2\2\u0185\u018a\3\2\2\2\u0186\u0184")
+        buf.write(u"\3\2\2\2\u0187\u0189\5P)\2\u0188\u0187\3\2\2\2\u0189")
+        buf.write(u"\u018c\3\2\2\2\u018a\u0188\3\2\2\2\u018a\u018b\3\2\2")
+        buf.write(u"\2\u018bM\3\2\2\2\u018c\u018a\3\2\2\2\u018d\u018e\7$")
+        buf.write(u"\2\2\u018e\u018f\7@\2\2\u018fO\3\2\2\2\u0190\u0191\7")
+        buf.write(u"\4\2\2\u0191\u0193\7@\2\2\u0192\u0194\5R*\2\u0193\u0192")
+        buf.write(u"\3\2\2\2\u0193\u0194\3\2\2\2\u0194Q\3\2\2\2\u0195\u0196")
+        buf.write(u"\7\n\2\2\u0196\u0197\5\34\17\2\u0197\u0198\7\f\2\2\u0198")
+        buf.write(u"S\3\2\2\2\u0199\u019a\t\b\2\2\u019aU\3\2\2\2&X[`x\u0080")
+        buf.write(u"\u008b\u0092\u009c\u00b0\u00b4\u00c7\u00d5\u00d7\u00df")
+        buf.write(u"\u00e2\u00ec\u00f3\u00fb\u00fe\u0105\u0108\u0112\u0115")
+        buf.write(u"\u0123\u0136\u014d\u0153\u015e\u0164\u016a\u0172\u017b")
+        buf.write(u"\u017f\u0184\u018a\u0193")
         return buf.getvalue()
 
 
@@ -251,38 +262,41 @@ class CalcParser ( Parser ):
     RULE_formdecl = 15
     RULE_vardecl = 16
     RULE_constdecl = 17
-    RULE_typeDecl = 18
-    RULE_declList = 19
-    RULE_constdeclList = 20
-    RULE_varDecl = 21
-    RULE_r_type = 22
-    RULE_arrayDecl = 23
-    RULE_ctrlStruct = 24
-    RULE_ifStruct = 25
-    RULE_withForms = 26
-    RULE_withNewTag = 27
-    RULE_elseStruct = 28
-    RULE_loopStruct = 29
-    RULE_forloopstruct = 30
-    RULE_breakStruct = 31
-    RULE_ret = 32
-    RULE_function = 33
-    RULE_formParList = 34
-    RULE_formPar = 35
-    RULE_full_id = 36
-    RULE_sub_id = 37
-    RULE_array_index = 38
-    RULE_boolean = 39
+    RULE_typeDeclList = 18
+    RULE_typeDecl = 19
+    RULE_declList = 20
+    RULE_constdeclList = 21
+    RULE_varDecl = 22
+    RULE_r_type = 23
+    RULE_arrayDecl = 24
+    RULE_ctrlStruct = 25
+    RULE_ifStruct = 26
+    RULE_withForms = 27
+    RULE_withNewTag = 28
+    RULE_elseStruct = 29
+    RULE_loopStruct = 30
+    RULE_forloopstruct = 31
+    RULE_breakStruct = 32
+    RULE_ret = 33
+    RULE_function = 34
+    RULE_formParList = 35
+    RULE_formPar = 36
+    RULE_full_id = 37
+    RULE_child_id = 38
+    RULE_sub_id = 39
+    RULE_array_index = 40
+    RULE_boolean = 41
 
     ruleNames =  [ u"calcfile", u"formset", u"converter", u"form", u"section", 
                    u"block", u"stmt", u"open_stmt", u"assign", u"call", 
                    u"multicopy_accum", u"start_index", u"end_index", u"expr", 
-                   u"argList", u"formdecl", u"vardecl", u"constdecl", u"typeDecl", 
-                   u"declList", u"constdeclList", u"varDecl", u"r_type", 
-                   u"arrayDecl", u"ctrlStruct", u"ifStruct", u"withForms", 
-                   u"withNewTag", u"elseStruct", u"loopStruct", u"forloopstruct", 
-                   u"breakStruct", u"ret", u"function", u"formParList", 
-                   u"formPar", u"full_id", u"sub_id", u"array_index", u"boolean" ]
+                   u"argList", u"formdecl", u"vardecl", u"constdecl", u"typeDeclList", 
+                   u"typeDecl", u"declList", u"constdeclList", u"varDecl", 
+                   u"r_type", u"arrayDecl", u"ctrlStruct", u"ifStruct", 
+                   u"withForms", u"withNewTag", u"elseStruct", u"loopStruct", 
+                   u"forloopstruct", u"breakStruct", u"ret", u"function", 
+                   u"formParList", u"formPar", u"full_id", u"child_id", 
+                   u"sub_id", u"array_index", u"boolean" ]
 
     EOF = Token.EOF
     T__0=1
@@ -409,29 +423,29 @@ class CalcParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 80
+            self.state = 84
             self.converter()
-            self.state = 82
+            self.state = 86
             _la = self._input.LA(1)
             if _la==CalcParser.CONSTANT:
-                self.state = 81
+                self.state = 85
                 self.constdecl()
 
 
-            self.state = 85
+            self.state = 89
             _la = self._input.LA(1)
             if _la==CalcParser.VAR:
-                self.state = 84
+                self.state = 88
                 self.vardecl()
 
 
-            self.state = 90
+            self.state = 94
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==CalcParser.PROCEDURE:
-                self.state = 87
+                self.state = 91
                 self.section()
-                self.state = 92
+                self.state = 96
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -476,15 +490,15 @@ class CalcParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_formset)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 93
-            self.match(CalcParser.T__0)
-            self.state = 94
-            self.match(CalcParser.ID)
-            self.state = 95
-            self.match(CalcParser.T__1)
-            self.state = 96
-            self.form()
             self.state = 97
+            self.match(CalcParser.T__0)
+            self.state = 98
+            self.match(CalcParser.ID)
+            self.state = 99
+            self.match(CalcParser.T__1)
+            self.state = 100
+            self.form()
+            self.state = 101
             self.match(CalcParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -523,13 +537,13 @@ class CalcParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_converter)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 99
+            self.state = 103
             self.match(CalcParser.T__3)
-            self.state = 100
+            self.state = 104
             self.match(CalcParser.ID)
-            self.state = 101
+            self.state = 105
             self.match(CalcParser.T__4)
-            self.state = 102
+            self.state = 106
             self.match(CalcParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -545,8 +559,9 @@ class CalcParser ( Parser ):
             super(CalcParser.FormContext, self).__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self):
-            return self.getToken(CalcParser.ID, 0)
+        def full_id(self):
+            return self.getTypedRuleContext(CalcParser.Full_idContext,0)
+
 
         def getRuleIndex(self):
             return CalcParser.RULE_form
@@ -568,8 +583,8 @@ class CalcParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_form)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 104
-            self.match(CalcParser.ID)
+            self.state = 108
+            self.full_id()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -590,16 +605,16 @@ class CalcParser ( Parser ):
         def ID(self):
             return self.getToken(CalcParser.ID, 0)
 
+        def typeDeclList(self):
+            return self.getTypedRuleContext(CalcParser.TypeDeclListContext,0)
+
+
         def formdecl(self):
             return self.getTypedRuleContext(CalcParser.FormdeclContext,0)
 
 
         def stmt(self):
             return self.getTypedRuleContext(CalcParser.StmtContext,0)
-
-
-        def typeDecl(self):
-            return self.getTypedRuleContext(CalcParser.TypeDeclContext,0)
 
 
         def vardecl(self):
@@ -627,33 +642,28 @@ class CalcParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 106
-            self.match(CalcParser.PROCEDURE)
-            self.state = 107
-            self.match(CalcParser.ID)
-            self.state = 108
-            self.match(CalcParser.T__5)
             self.state = 110
-            _la = self._input.LA(1)
-            if _la==CalcParser.T__33 or _la==CalcParser.ID:
-                self.state = 109
-                self.typeDecl()
-
-
+            self.match(CalcParser.PROCEDURE)
+            self.state = 111
+            self.match(CalcParser.ID)
             self.state = 112
-            self.match(CalcParser.T__6)
+            self.match(CalcParser.T__5)
             self.state = 113
-            self.match(CalcParser.T__2)
+            self.typeDeclList()
             self.state = 114
-            self.formdecl()
+            self.match(CalcParser.T__6)
+            self.state = 115
+            self.match(CalcParser.T__2)
             self.state = 116
+            self.formdecl()
+            self.state = 118
             _la = self._input.LA(1)
             if _la==CalcParser.VAR:
-                self.state = 115
+                self.state = 117
                 self.vardecl()
 
 
-            self.state = 118
+            self.state = 120
             self.stmt()
         except RecognitionException as re:
             localctx.exception = re
@@ -703,19 +713,19 @@ class CalcParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 120
+            self.state = 122
             self.match(CalcParser.BEGIN)
-            self.state = 124
+            self.state = 126
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CalcParser.IF) | (1 << CalcParser.FOR) | (1 << CalcParser.BREAK) | (1 << CalcParser.WITHFORMS) | (1 << CalcParser.WITHNEWTAG) | (1 << CalcParser.RETURN) | (1 << CalcParser.BEGIN) | (1 << CalcParser.ID))) != 0):
-                self.state = 121
+                self.state = 123
                 self.stmt()
-                self.state = 126
+                self.state = 128
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 127
+            self.state = 129
             self.match(CalcParser.END)
         except RecognitionException as re:
             localctx.exception = re
@@ -786,59 +796,59 @@ class CalcParser ( Parser ):
         localctx = CalcParser.StmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_stmt)
         try:
-            self.state = 142
+            self.state = 144
             token = self._input.LA(1)
             if token in [CalcParser.FOR, CalcParser.BREAK, CalcParser.RETURN, CalcParser.BEGIN, CalcParser.ID]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 135
-                la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
+                self.state = 137
+                la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
                 if la_ == 1:
-                    self.state = 129
+                    self.state = 131
                     self.assign()
                     pass
 
                 elif la_ == 2:
-                    self.state = 130
+                    self.state = 132
                     self.call()
                     pass
 
                 elif la_ == 3:
-                    self.state = 131
+                    self.state = 133
                     self.ret()
                     pass
 
                 elif la_ == 4:
-                    self.state = 132
+                    self.state = 134
                     self.block()
                     pass
 
                 elif la_ == 5:
-                    self.state = 133
+                    self.state = 135
                     self.forloopstruct()
                     pass
 
                 elif la_ == 6:
-                    self.state = 134
+                    self.state = 136
                     self.breakStruct()
                     pass
 
 
-                self.state = 137
+                self.state = 139
                 self.match(CalcParser.T__2)
 
             elif token in [CalcParser.IF]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 139
+                self.state = 141
                 self.ifStruct()
 
             elif token in [CalcParser.WITHFORMS]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 140
+                self.state = 142
                 self.withForms()
 
             elif token in [CalcParser.WITHNEWTAG]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 141
+                self.state = 143
                 self.withNewTag()
 
             else:
@@ -909,53 +919,53 @@ class CalcParser ( Parser ):
         localctx = CalcParser.Open_stmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_open_stmt)
         try:
-            self.state = 152
-            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
+            self.state = 154
+            la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 144
+                self.state = 146
                 self.assign()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 145
+                self.state = 147
                 self.call()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 146
+                self.state = 148
                 self.ret()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 147
+                self.state = 149
                 self.block()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 148
+                self.state = 150
                 self.forloopstruct()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 149
+                self.state = 151
                 self.ifStruct()
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 150
+                self.state = 152
                 self.withForms()
                 pass
 
             elif la_ == 8:
                 self.enterOuterAlt(localctx, 8)
-                self.state = 151
+                self.state = 153
                 self.withNewTag()
                 pass
 
@@ -1012,15 +1022,15 @@ class CalcParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 154
+            self.state = 156
             self.full_id()
-            self.state = 155
+            self.state = 157
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CalcParser.LET) | (1 << CalcParser.ALTLET) | (1 << CalcParser.CRAZYLET))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self.consume()
-            self.state = 156
+            self.state = 158
             self.expr(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -1063,13 +1073,13 @@ class CalcParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_call)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 158
-            self.match(CalcParser.ID)
-            self.state = 159
-            self.match(CalcParser.T__5)
             self.state = 160
-            self.argList()
+            self.match(CalcParser.ID)
             self.state = 161
+            self.match(CalcParser.T__5)
+            self.state = 162
+            self.argList()
+            self.state = 163
             self.match(CalcParser.T__6)
         except RecognitionException as re:
             localctx.exception = re
@@ -1117,17 +1127,17 @@ class CalcParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_multicopy_accum)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 163
-            self.full_id()
-            self.state = 164
-            self.match(CalcParser.T__7)
             self.state = 165
-            self.start_index()
+            self.full_id()
             self.state = 166
-            self.match(CalcParser.T__8)
+            self.match(CalcParser.T__7)
             self.state = 167
-            self.end_index()
+            self.start_index()
             self.state = 168
+            self.match(CalcParser.T__8)
+            self.state = 169
+            self.end_index()
+            self.state = 170
             self.match(CalcParser.T__9)
         except RecognitionException as re:
             localctx.exception = re
@@ -1169,17 +1179,17 @@ class CalcParser ( Parser ):
         localctx = CalcParser.Start_indexContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_start_index)
         try:
-            self.state = 172
-            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
+            self.state = 174
+            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 170
+                self.state = 172
                 self.match(CalcParser.LITERAL)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 171
+                self.state = 173
                 self.expr(0)
                 pass
 
@@ -1224,17 +1234,17 @@ class CalcParser ( Parser ):
         localctx = CalcParser.End_indexContext(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_end_index)
         try:
-            self.state = 176
-            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
+            self.state = 178
+            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 174
+                self.state = 176
                 self.match(CalcParser.LITERAL)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 175
+                self.state = 177
                 self.expr(0)
                 pass
 
@@ -1515,16 +1525,16 @@ class CalcParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 195
-            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+            self.state = 197
+            la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
                 localctx = CalcParser.NotContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 179
+                self.state = 181
                 self.match(CalcParser.NOT)
-                self.state = 180
+                self.state = 182
                 self.expr(7)
                 pass
 
@@ -1532,7 +1542,7 @@ class CalcParser ( Parser ):
                 localctx = CalcParser.LiteralContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 181
+                self.state = 183
                 self.match(CalcParser.LITERAL)
                 pass
 
@@ -1540,7 +1550,7 @@ class CalcParser ( Parser ):
                 localctx = CalcParser.BoolContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 182
+                self.state = 184
                 _la = self._input.LA(1)
                 if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CalcParser.T__23) | (1 << CalcParser.T__24) | (1 << CalcParser.T__25) | (1 << CalcParser.T__26) | (1 << CalcParser.T__27) | (1 << CalcParser.T__28) | (1 << CalcParser.T__29) | (1 << CalcParser.T__30))) != 0)):
                     self._errHandler.recoverInline(self)
@@ -1552,7 +1562,7 @@ class CalcParser ( Parser ):
                 localctx = CalcParser.FunctionCallContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 183
+                self.state = 185
                 self.call()
                 pass
 
@@ -1560,7 +1570,7 @@ class CalcParser ( Parser ):
                 localctx = CalcParser.MultiCopyAccumulateContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 184
+                self.state = 186
                 self.multicopy_accum()
                 pass
 
@@ -1568,13 +1578,13 @@ class CalcParser ( Parser ):
                 localctx = CalcParser.MaxContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 185
-                self.match(CalcParser.T__31)
-                self.state = 186
-                self.match(CalcParser.T__5)
                 self.state = 187
-                self.argList()
+                self.match(CalcParser.T__31)
                 self.state = 188
+                self.match(CalcParser.T__5)
+                self.state = 189
+                self.argList()
+                self.state = 190
                 self.match(CalcParser.T__6)
                 pass
 
@@ -1582,11 +1592,11 @@ class CalcParser ( Parser ):
                 localctx = CalcParser.ParensContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 190
-                self.match(CalcParser.T__5)
-                self.state = 191
-                self.expr(0)
                 self.state = 192
+                self.match(CalcParser.T__5)
+                self.state = 193
+                self.expr(0)
+                self.state = 194
                 self.match(CalcParser.T__6)
                 pass
 
@@ -1594,98 +1604,98 @@ class CalcParser ( Parser ):
                 localctx = CalcParser.VarRefContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 194
+                self.state = 196
                 self.full_id()
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 211
+            self.state = 213
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 209
-                    la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+                    self.state = 211
+                    la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
                     if la_ == 1:
                         localctx = CalcParser.DivMulContext(self, CalcParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 197
+                        self.state = 199
                         if not self.precpred(self._ctx, 12):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
-                        self.state = 198
+                        self.state = 200
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==CalcParser.T__10 or _la==CalcParser.T__11):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self.consume()
-                        self.state = 199
+                        self.state = 201
                         self.expr(13)
                         pass
 
                     elif la_ == 2:
                         localctx = CalcParser.AddSubContext(self, CalcParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 200
+                        self.state = 202
                         if not self.precpred(self._ctx, 11):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
-                        self.state = 201
+                        self.state = 203
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==CalcParser.T__12 or _la==CalcParser.T__13):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self.consume()
-                        self.state = 202
+                        self.state = 204
                         self.expr(12)
                         pass
 
                     elif la_ == 3:
                         localctx = CalcParser.LogicContext(self, CalcParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 203
+                        self.state = 205
                         if not self.precpred(self._ctx, 10):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
-                        self.state = 204
+                        self.state = 206
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==CalcParser.T__14 or _la==CalcParser.T__15):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self.consume()
-                        self.state = 205
+                        self.state = 207
                         self.expr(11)
                         pass
 
                     elif la_ == 4:
                         localctx = CalcParser.PredicateContext(self, CalcParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 206
+                        self.state = 208
                         if not self.precpred(self._ctx, 9):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
-                        self.state = 207
+                        self.state = 209
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CalcParser.T__16) | (1 << CalcParser.T__17) | (1 << CalcParser.T__18) | (1 << CalcParser.T__19) | (1 << CalcParser.T__20) | (1 << CalcParser.T__21) | (1 << CalcParser.T__22))) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self.consume()
-                        self.state = 208
+                        self.state = 210
                         self.expr(10)
                         pass
 
              
-                self.state = 213
+                self.state = 215
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1729,20 +1739,20 @@ class CalcParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 222
+            self.state = 224
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << CalcParser.T__5) | (1 << CalcParser.T__23) | (1 << CalcParser.T__24) | (1 << CalcParser.T__25) | (1 << CalcParser.T__26) | (1 << CalcParser.T__27) | (1 << CalcParser.T__28) | (1 << CalcParser.T__29) | (1 << CalcParser.T__30) | (1 << CalcParser.T__31) | (1 << CalcParser.LITERAL) | (1 << CalcParser.NOT) | (1 << CalcParser.ID))) != 0):
-                self.state = 214
+                self.state = 216
                 self.expr(0)
-                self.state = 219
+                self.state = 221
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==CalcParser.T__32:
-                    self.state = 215
+                    self.state = 217
                     self.match(CalcParser.T__32)
-                    self.state = 216
+                    self.state = 218
                     self.expr(0)
-                    self.state = 221
+                    self.state = 223
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
@@ -1762,8 +1772,9 @@ class CalcParser ( Parser ):
             super(CalcParser.FormdeclContext, self).__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self):
-            return self.getToken(CalcParser.ID, 0)
+        def full_id(self):
+            return self.getTypedRuleContext(CalcParser.Full_idContext,0)
+
 
         def getRuleIndex(self):
             return CalcParser.RULE_formdecl
@@ -1785,11 +1796,11 @@ class CalcParser ( Parser ):
         self.enterRule(localctx, 30, self.RULE_formdecl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 224
-            self.match(CalcParser.T__0)
-            self.state = 225
-            self.match(CalcParser.ID)
             self.state = 226
+            self.match(CalcParser.T__0)
+            self.state = 227
+            self.full_id()
+            self.state = 228
             self.match(CalcParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -1835,18 +1846,18 @@ class CalcParser ( Parser ):
         self.enterRule(localctx, 32, self.RULE_vardecl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 228
+            self.state = 230
             self.match(CalcParser.VAR)
-            self.state = 232
+            self.state = 234
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,16,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,15,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 229
+                    self.state = 231
                     self.declList() 
-                self.state = 234
+                self.state = 236
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,16,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,15,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1893,17 +1904,78 @@ class CalcParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 235
+            self.state = 237
             self.match(CalcParser.CONSTANT)
-            self.state = 239
+            self.state = 241
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==CalcParser.ID:
-                self.state = 236
+                self.state = 238
                 self.constdeclList()
-                self.state = 241
+                self.state = 243
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class TypeDeclListContext(ParserRuleContext):
+
+        def __init__(self, parser, parent=None, invokingState=-1):
+            super(CalcParser.TypeDeclListContext, self).__init__(parent, invokingState)
+            self.parser = parser
+
+        def typeDecl(self, i=None):
+            if i is None:
+                return self.getTypedRuleContexts(CalcParser.TypeDeclContext)
+            else:
+                return self.getTypedRuleContext(CalcParser.TypeDeclContext,i)
+
+
+        def getRuleIndex(self):
+            return CalcParser.RULE_typeDeclList
+
+        def enterRule(self, listener):
+            if isinstance( listener, CalcListener ):
+                listener.enterTypeDeclList(self)
+
+        def exitRule(self, listener):
+            if isinstance( listener, CalcListener ):
+                listener.exitTypeDeclList(self)
+
+
+
+
+    def typeDeclList(self):
+
+        localctx = CalcParser.TypeDeclListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_typeDeclList)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 252
+            _la = self._input.LA(1)
+            if _la==CalcParser.T__33 or _la==CalcParser.ID:
+                self.state = 244
+                self.typeDecl()
+                self.state = 249
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==CalcParser.T__2:
+                    self.state = 245
+                    self.match(CalcParser.T__2)
+                    self.state = 246
+                    self.typeDecl()
+                    self.state = 251
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
+
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1947,32 +2019,32 @@ class CalcParser ( Parser ):
     def typeDecl(self):
 
         localctx = CalcParser.TypeDeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_typeDecl)
+        self.enterRule(localctx, 38, self.RULE_typeDecl)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 250
+            self.state = 262
             _la = self._input.LA(1)
             if _la==CalcParser.ID:
-                self.state = 242
+                self.state = 254
                 self.varDecl()
-                self.state = 247
+                self.state = 259
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==CalcParser.T__32:
-                    self.state = 243
+                    self.state = 255
                     self.match(CalcParser.T__32)
-                    self.state = 244
+                    self.state = 256
                     self.varDecl()
-                    self.state = 249
+                    self.state = 261
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 252
+            self.state = 264
             self.match(CalcParser.T__33)
-            self.state = 253
+            self.state = 265
             self.r_type()
         except RecognitionException as re:
             localctx.exception = re
@@ -2016,34 +2088,34 @@ class CalcParser ( Parser ):
     def declList(self):
 
         localctx = CalcParser.DeclListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_declList)
+        self.enterRule(localctx, 40, self.RULE_declList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 263
+            self.state = 275
             _la = self._input.LA(1)
             if _la==CalcParser.ID:
-                self.state = 255
+                self.state = 267
                 self.varDecl()
-                self.state = 260
+                self.state = 272
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==CalcParser.T__32:
-                    self.state = 256
+                    self.state = 268
                     self.match(CalcParser.T__32)
-                    self.state = 257
+                    self.state = 269
                     self.varDecl()
-                    self.state = 262
+                    self.state = 274
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 265
+            self.state = 277
             self.match(CalcParser.T__33)
-            self.state = 266
+            self.state = 278
             self.r_type()
-            self.state = 267
+            self.state = 279
             self.match(CalcParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -2083,16 +2155,16 @@ class CalcParser ( Parser ):
     def constdeclList(self):
 
         localctx = CalcParser.ConstdeclListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_constdeclList)
+        self.enterRule(localctx, 42, self.RULE_constdeclList)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 269
+            self.state = 281
             self.varDecl()
-            self.state = 270
+            self.state = 282
             self.match(CalcParser.T__20)
-            self.state = 271
+            self.state = 283
             self.match(CalcParser.LITERAL)
-            self.state = 272
+            self.state = 284
             self.match(CalcParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -2128,10 +2200,10 @@ class CalcParser ( Parser ):
     def varDecl(self):
 
         localctx = CalcParser.VarDeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_varDecl)
+        self.enterRule(localctx, 44, self.RULE_varDecl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 274
+            self.state = 286
             self.match(CalcParser.ID)
         except RecognitionException as re:
             localctx.exception = re
@@ -2171,18 +2243,18 @@ class CalcParser ( Parser ):
     def r_type(self):
 
         localctx = CalcParser.R_typeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_r_type)
+        self.enterRule(localctx, 46, self.RULE_r_type)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 277
+            self.state = 289
             _la = self._input.LA(1)
             if _la==CalcParser.ARRAY:
-                self.state = 276
+                self.state = 288
                 self.arrayDecl()
 
 
-            self.state = 279
+            self.state = 291
             self.match(CalcParser.ID)
         except RecognitionException as re:
             localctx.exception = re
@@ -2224,18 +2296,18 @@ class CalcParser ( Parser ):
     def arrayDecl(self):
 
         localctx = CalcParser.ArrayDeclContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_arrayDecl)
+        self.enterRule(localctx, 48, self.RULE_arrayDecl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 281
+            self.state = 293
             self.match(CalcParser.ARRAY)
-            self.state = 282
+            self.state = 294
             self.match(CalcParser.T__7)
-            self.state = 283
+            self.state = 295
             self.match(CalcParser.LITERAL)
-            self.state = 284
+            self.state = 296
             self.match(CalcParser.T__9)
-            self.state = 285
+            self.state = 297
             self.match(CalcParser.OF)
         except RecognitionException as re:
             localctx.exception = re
@@ -2272,10 +2344,10 @@ class CalcParser ( Parser ):
     def ctrlStruct(self):
 
         localctx = CalcParser.CtrlStructContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_ctrlStruct)
+        self.enterRule(localctx, 50, self.RULE_ctrlStruct)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 287
+            self.state = 299
             self.ifStruct()
         except RecognitionException as re:
             localctx.exception = re
@@ -2329,27 +2401,27 @@ class CalcParser ( Parser ):
     def ifStruct(self):
 
         localctx = CalcParser.IfStructContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_ifStruct)
+        self.enterRule(localctx, 52, self.RULE_ifStruct)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 289
+            self.state = 301
             self.match(CalcParser.IF)
-            self.state = 290
+            self.state = 302
             self.expr(0)
-            self.state = 291
+            self.state = 303
             self.match(CalcParser.THEN)
-            self.state = 292
+            self.state = 304
             self.open_stmt()
-            self.state = 296
-            la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
+            self.state = 308
+            la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
             if la_ == 1:
-                self.state = 293
+                self.state = 305
                 self.match(CalcParser.T__2)
 
             elif la_ == 2:
-                self.state = 294
+                self.state = 306
                 self.match(CalcParser.ELSE)
-                self.state = 295
+                self.state = 307
                 self.elseStruct()
 
 
@@ -2401,24 +2473,24 @@ class CalcParser ( Parser ):
     def withForms(self):
 
         localctx = CalcParser.WithFormsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 52, self.RULE_withForms)
+        self.enterRule(localctx, 54, self.RULE_withForms)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 298
+            self.state = 310
             self.match(CalcParser.WITHFORMS)
-            self.state = 299
+            self.state = 311
             self.match(CalcParser.T__5)
-            self.state = 300
+            self.state = 312
             self.full_id()
-            self.state = 301
+            self.state = 313
             self.match(CalcParser.T__32)
-            self.state = 302
+            self.state = 314
             self.full_id()
-            self.state = 303
+            self.state = 315
             self.match(CalcParser.T__6)
-            self.state = 304
+            self.state = 316
             self.match(CalcParser.DO)
-            self.state = 305
+            self.state = 317
             self.stmt()
         except RecognitionException as re:
             localctx.exception = re
@@ -2464,20 +2536,20 @@ class CalcParser ( Parser ):
     def withNewTag(self):
 
         localctx = CalcParser.WithNewTagContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 54, self.RULE_withNewTag)
+        self.enterRule(localctx, 56, self.RULE_withNewTag)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 307
+            self.state = 319
             self.match(CalcParser.WITHNEWTAG)
-            self.state = 308
+            self.state = 320
             self.match(CalcParser.T__5)
-            self.state = 309
+            self.state = 321
             self.match(CalcParser.LITERAL)
-            self.state = 310
+            self.state = 322
             self.match(CalcParser.T__6)
-            self.state = 311
+            self.state = 323
             self.match(CalcParser.DO)
-            self.state = 312
+            self.state = 324
             self.stmt()
         except RecognitionException as re:
             localctx.exception = re
@@ -2514,10 +2586,10 @@ class CalcParser ( Parser ):
     def elseStruct(self):
 
         localctx = CalcParser.ElseStructContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_elseStruct)
+        self.enterRule(localctx, 58, self.RULE_elseStruct)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 314
+            self.state = 326
             self.stmt()
         except RecognitionException as re:
             localctx.exception = re
@@ -2575,31 +2647,31 @@ class CalcParser ( Parser ):
     def loopStruct(self):
 
         localctx = CalcParser.LoopStructContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 58, self.RULE_loopStruct)
+        self.enterRule(localctx, 60, self.RULE_loopStruct)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 316
+            self.state = 328
             self.match(CalcParser.DO)
-            self.state = 319
+            self.state = 331
             _la = self._input.LA(1)
             if _la==CalcParser.WHILE:
-                self.state = 317
+                self.state = 329
                 self.match(CalcParser.WHILE)
-                self.state = 318
+                self.state = 330
                 localctx.preCond = self.expr(0)
 
 
-            self.state = 321
+            self.state = 333
             self.stmt()
-            self.state = 322
+            self.state = 334
             self.match(CalcParser.LOOP)
-            self.state = 325
+            self.state = 337
             _la = self._input.LA(1)
             if _la==CalcParser.WHILE:
-                self.state = 323
+                self.state = 335
                 self.match(CalcParser.WHILE)
-                self.state = 324
+                self.state = 336
                 localctx.postCond = self.expr(0)
 
 
@@ -2661,32 +2733,32 @@ class CalcParser ( Parser ):
     def forloopstruct(self):
 
         localctx = CalcParser.ForloopstructContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_forloopstruct)
+        self.enterRule(localctx, 62, self.RULE_forloopstruct)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 327
+            self.state = 339
             self.match(CalcParser.FOR)
-            self.state = 328
+            self.state = 340
             self.match(CalcParser.ID)
-            self.state = 329
+            self.state = 341
             self.match(CalcParser.LET)
-            self.state = 330
+            self.state = 342
             self.expr(0)
-            self.state = 331
+            self.state = 343
             self.match(CalcParser.TO)
-            self.state = 332
+            self.state = 344
             self.expr(0)
-            self.state = 333
+            self.state = 345
             self.match(CalcParser.DO)
-            self.state = 336
-            la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
+            self.state = 348
+            la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
             if la_ == 1:
-                self.state = 334
+                self.state = 346
                 self.block()
                 pass
 
             elif la_ == 2:
-                self.state = 335
+                self.state = 347
                 self.stmt()
                 pass
 
@@ -2725,10 +2797,10 @@ class CalcParser ( Parser ):
     def breakStruct(self):
 
         localctx = CalcParser.BreakStructContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 62, self.RULE_breakStruct)
+        self.enterRule(localctx, 64, self.RULE_breakStruct)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 338
+            self.state = 350
             self.match(CalcParser.BREAK)
         except RecognitionException as re:
             localctx.exception = re
@@ -2768,15 +2840,15 @@ class CalcParser ( Parser ):
     def ret(self):
 
         localctx = CalcParser.RetContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 64, self.RULE_ret)
+        self.enterRule(localctx, 66, self.RULE_ret)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 340
+            self.state = 352
             self.match(CalcParser.RETURN)
-            self.state = 342
-            la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
+            self.state = 354
+            la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
             if la_ == 1:
-                self.state = 341
+                self.state = 353
                 self.expr(0)
 
 
@@ -2832,24 +2904,24 @@ class CalcParser ( Parser ):
     def function(self):
 
         localctx = CalcParser.FunctionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 66, self.RULE_function)
+        self.enterRule(localctx, 68, self.RULE_function)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 344
+            self.state = 356
             localctx.retType = self.full_id()
-            self.state = 345
+            self.state = 357
             localctx.fnName = self.full_id()
-            self.state = 346
+            self.state = 358
             self.formParList()
-            self.state = 348
+            self.state = 360
             _la = self._input.LA(1)
             if _la==CalcParser.VAR:
-                self.state = 347
+                self.state = 359
                 self.vardecl()
 
 
-            self.state = 350
+            self.state = 362
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -2889,23 +2961,23 @@ class CalcParser ( Parser ):
     def formParList(self):
 
         localctx = CalcParser.FormParListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 68, self.RULE_formParList)
+        self.enterRule(localctx, 70, self.RULE_formParList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 352
+            self.state = 364
             self.match(CalcParser.T__5)
-            self.state = 356
+            self.state = 368
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==CalcParser.ARRAY or _la==CalcParser.ID:
-                self.state = 353
+                self.state = 365
                 self.formPar()
-                self.state = 358
+                self.state = 370
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 359
+            self.state = 371
             self.match(CalcParser.T__6)
         except RecognitionException as re:
             localctx.exception = re
@@ -2955,20 +3027,20 @@ class CalcParser ( Parser ):
     def formPar(self):
 
         localctx = CalcParser.FormParContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 70, self.RULE_formPar)
+        self.enterRule(localctx, 72, self.RULE_formPar)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 361
+            self.state = 373
             self.r_type()
-            self.state = 362
+            self.state = 374
             localctx.name = self.full_id()
-            self.state = 365
+            self.state = 377
             _la = self._input.LA(1)
             if _la==CalcParser.LET:
-                self.state = 363
+                self.state = 375
                 self.match(CalcParser.LET)
-                self.state = 364
+                self.state = 376
                 localctx.defaultVal = self.expr(0)
 
 
@@ -2991,6 +3063,13 @@ class CalcParser ( Parser ):
 
         def array_index(self):
             return self.getTypedRuleContext(CalcParser.Array_indexContext,0)
+
+
+        def child_id(self, i=None):
+            if i is None:
+                return self.getTypedRuleContexts(CalcParser.Child_idContext)
+            else:
+                return self.getTypedRuleContext(CalcParser.Child_idContext,i)
 
 
         def sub_id(self, i=None):
@@ -3017,29 +3096,81 @@ class CalcParser ( Parser ):
     def full_id(self):
 
         localctx = CalcParser.Full_idContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 72, self.RULE_full_id)
+        self.enterRule(localctx, 74, self.RULE_full_id)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 367
+            self.state = 379
             self.match(CalcParser.ID)
-            self.state = 369
-            la_ = self._interp.adaptivePredict(self._input,31,self._ctx)
+            self.state = 381
+            la_ = self._interp.adaptivePredict(self._input,32,self._ctx)
             if la_ == 1:
-                self.state = 368
+                self.state = 380
                 self.array_index()
 
 
-            self.state = 374
+            self.state = 386
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 371
-                    self.sub_id() 
-                self.state = 376
+                    self.state = 383
+                    self.child_id() 
+                self.state = 388
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,32,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,33,self._ctx)
 
+            self.state = 392
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 389
+                    self.sub_id() 
+                self.state = 394
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,34,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class Child_idContext(ParserRuleContext):
+
+        def __init__(self, parser, parent=None, invokingState=-1):
+            super(CalcParser.Child_idContext, self).__init__(parent, invokingState)
+            self.parser = parser
+
+        def ID(self):
+            return self.getToken(CalcParser.ID, 0)
+
+        def getRuleIndex(self):
+            return CalcParser.RULE_child_id
+
+        def enterRule(self, listener):
+            if isinstance( listener, CalcListener ):
+                listener.enterChild_id(self)
+
+        def exitRule(self, listener):
+            if isinstance( listener, CalcListener ):
+                listener.exitChild_id(self)
+
+
+
+
+    def child_id(self):
+
+        localctx = CalcParser.Child_idContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 76, self.RULE_child_id)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 395
+            self.match(CalcParser.T__33)
+            self.state = 396
+            self.match(CalcParser.ID)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3078,17 +3209,17 @@ class CalcParser ( Parser ):
     def sub_id(self):
 
         localctx = CalcParser.Sub_idContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 74, self.RULE_sub_id)
+        self.enterRule(localctx, 78, self.RULE_sub_id)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 377
+            self.state = 398
             self.match(CalcParser.T__1)
-            self.state = 378
+            self.state = 399
             self.match(CalcParser.ID)
-            self.state = 380
-            la_ = self._interp.adaptivePredict(self._input,33,self._ctx)
+            self.state = 401
+            la_ = self._interp.adaptivePredict(self._input,35,self._ctx)
             if la_ == 1:
-                self.state = 379
+                self.state = 400
                 self.array_index()
 
 
@@ -3127,14 +3258,14 @@ class CalcParser ( Parser ):
     def array_index(self):
 
         localctx = CalcParser.Array_indexContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 76, self.RULE_array_index)
+        self.enterRule(localctx, 80, self.RULE_array_index)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 382
+            self.state = 403
             self.match(CalcParser.T__7)
-            self.state = 383
+            self.state = 404
             self.expr(0)
-            self.state = 384
+            self.state = 405
             self.match(CalcParser.T__9)
         except RecognitionException as re:
             localctx.exception = re
@@ -3176,11 +3307,11 @@ class CalcParser ( Parser ):
     def boolean(self):
 
         localctx = CalcParser.BooleanContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 78, self.RULE_boolean)
+        self.enterRule(localctx, 82, self.RULE_boolean)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 386
+            self.state = 407
             _la = self._input.LA(1)
             if not(((((_la - 65)) & ~0x3f) == 0 and ((1 << (_la - 65)) & ((1 << (CalcParser.TRUE - 65)) | (1 << (CalcParser.FALSE - 65)) | (1 << (CalcParser.CHECKED - 65)))) != 0)):
                 self._errHandler.recoverInline(self)

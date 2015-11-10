@@ -89,7 +89,7 @@ if __name__ == '__main__':
         write_row(["ERROR","Form.Field","MEF",'Function','context','PT description','CID','formml_field_on_value'])
         for section in root.xpath("//Section"):
             import ipdb;ipdb.set_trace()
-            form = section.xpath("FormDecl/@val")[0].upper()
+            form = section.xpath("FormDecl//ID/@val")[-1].upper()
             form_source = settings['form_source'] +  ptformset_xml.xpath("/formsetdoc/form_identification_list/form_identification[@form_id='%s']/@form_source" % form)[0]
             ptform_xml = etree.parse(form_source)
 

@@ -502,11 +502,11 @@ class CalcListener(ParseTreeListener):
         self.exit()
 
     def enterFormdecl(self, ctx):
-        self.close("FormDecl",ctx.ID())
+        self.enter("FormDecl")
 
     # Exit a parse tree produced by CalcParser#end_index.
     def exitFormdecl(self, ctx):
-        pass
+        self.exit()
 
     def enterWithNewTag(self, ctx):
         self.enter("WithNewTag",ctx.LITERAL().getText().strip('"'))
@@ -515,3 +515,13 @@ class CalcListener(ParseTreeListener):
     def exitWithNewTag(self, ctx):
         self.exit()
 
+    def enterTypeDeclList(self,ctx):
+        pass
+
+    def exitTypeDeclList(self,ctx):
+        pass
+
+    def enterChild_id(self,ctx):
+        self.close("ID",ctx.ID().getText())
+    def exitChild_id(self,ctx):
+        pass
