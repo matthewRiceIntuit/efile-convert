@@ -538,3 +538,22 @@ class CalcListener(ParseTreeListener):
 
     def exitCaseStmt(self,ctx):
         self.exit()
+
+    def enterPresection(self,ctx):
+        pass
+
+    def exitPresection(self,ctx):
+        pass
+
+    def enterRange(self,ctx):
+        pass
+
+    def exitRange(self,ctx):
+        pass
+
+    def enterRangeExpr(self,ctx):
+        import ipdb;ipdb.set_trace()
+        self.enter("Range")
+
+    def exitRangeExpr(self,ctx):
+        self.exit()

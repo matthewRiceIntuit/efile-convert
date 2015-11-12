@@ -1,28 +1,23 @@
 
 XMLConverter S2015US1041	EFXML;
+PROCEDURE IRS4952Output(docID : FText);
+
+
+FORM FSCHJ;
+
 VAR
-
-TotDocCt	: FText;
-PROCEDURE IRS1040ScheduleEOutput( docid: ftext);
-
-FORM Fsche2;
-
-
+	i,n			: Index;
+	HBenTotal   :   Finteger;
 
 BEGIN
-					case Fsche1[y].type[c]  of
-						1:
-							begin
-								hType := "SINGLE FAMILY RESIDENCE";
-							end;
-						2:
-							begin
-								hType := "MULTI-FAMILY RESIDENCE";
-							end;
-						3:
-							begin
-								hType := "VACATION/SHORT-TERM RENTAL";
-							end;
+		If (L14A[i] > ["A".."I"])and (L14D[i]<>0)Then
+			Begin
+                OUTPUTVALUE( "F1041K1OtherCd", L14A[i] );
+                OUTPUTVALUE( "F1041K1OtherAmt", L14D[i] );
+		    End;
 
-					end;
+		for i:=1 to 5 do
+					OUTPUTVALUE( "DistributableNetIncomeAmt", L6[i] );
+
+
 END;

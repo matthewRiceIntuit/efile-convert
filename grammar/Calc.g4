@@ -1,7 +1,8 @@
 grammar Calc;
 
-calcfile: converter constdecl? vardecl? section*;
+calcfile:  presection? section*;
 
+presection: converter   constdecl? vardecl? ;
 
 formset :
     'FORM' ID  '.' form ';';
@@ -20,7 +21,7 @@ section :
 
 block: BEGIN stmt* END;
 
-stmt: (assign | call  | ret | block | forloopstruct | breakStruct ) ';' |  ifStruct |caseStuct| withForms |withNewTag;
+stmt: (assign | call  | ret | block |   breakStruct ) ';' |forloopstruct|  ifStruct |caseStuct| withForms |withNewTag;
 open_stmt: assign | call  | ret | block |caseStuct| forloopstruct|ifStruct | withForms |withNewTag;
 
 assign: full_id (LET|ALTLET|CRAZYLET) expr ;
@@ -38,8 +39,9 @@ end_index: LITERAL|expr;
 expr : expr op=('/' | '*') expr #DivMul
 	| expr op=('+' | '-') expr #AddSub
 	| expr op=('and' | 'or') expr #Logic
-	| expr op=('>' | '<' | '<=' | '>=' | '=' | '<>' | '==') expr #Predicate
+	| expr op=('>' | '<' | '<=' | '>=' | '=' | '<>' | '==' | IN) expr #Predicate
 	| LITERAL #Literal
+	| rangeExpr # Range
 	| NOT expr #Not
 	| ('True'|'TRUE'|'True'|'false'|'FALSE'|'False'|'Checked'|'checked'|'CHECKED') #Bool
 	| call #FunctionCall
@@ -65,6 +67,8 @@ varDecl: ID;
 r_type: arrayDecl? ID;
 
 arrayDecl: ARRAY '[' LITERAL ']' OF;
+
+rangeExpr: '[' LITERAL '..' LITERAL ']';
 
 ctrlStruct : ifStruct;
 
@@ -145,6 +149,7 @@ NOT: N O T;
 BREAK: B R E A K;
 WITHFORMS: W I T H F O R M S;
 WITHNEWTAG: W I T H N E W T A G;
+IN: I N;
 
 FORM: F O R M;
 
