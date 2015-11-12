@@ -68,7 +68,7 @@ r_type: arrayDecl? ID;
 
 arrayDecl: ARRAY '[' LITERAL ']' OF;
 
-rangeExpr: '[' expr '..' expr ']';
+rangeExpr: '[' expr ('..'|',') expr ']';
 
 ctrlStruct : ifStruct;
 
@@ -167,9 +167,9 @@ LET : ':=' ;
 ALTLET: '?=';
 CRAZYLET: '#=';
 
-full_id : ID array_index? sub_id* child_id;
+full_id : ID array_index? sub_id* child_id?;
 
-child_id: (':' ID array_index? sub_id*)*;
+child_id: ':' full_id;
 
 sub_id : '.' ID array_index?;
 ID : [a-zA-Z_][a-zA-Z_0-9]*;

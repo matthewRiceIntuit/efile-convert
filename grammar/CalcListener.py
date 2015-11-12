@@ -522,10 +522,10 @@ class CalcListener(ParseTreeListener):
         pass
 
     def enterChild_id(self,ctx):
-        self.close("ID",ctx.ID().getText())
+        self.enter("child_id")
 
     def exitChild_id(self,ctx):
-        pass
+        self.exit()
 
     def enterCaseStuct(self,ctx):
         self.enter("CASE")
