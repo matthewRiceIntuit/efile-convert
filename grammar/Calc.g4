@@ -68,9 +68,11 @@ r_type: arrayDecl? ID;
 
 arrayDecl: ARRAY '[' LITERAL ']' OF;
 
-rangeExpr: '[' LITERAL '..' LITERAL ']';
+rangeExpr: '[' expr '..' expr ']';
 
 ctrlStruct : ifStruct;
+
+
 
 ifStruct : IF expr THEN open_stmt (';'|ELSE elseStruct)?;
 

@@ -182,7 +182,7 @@ class CalcListener(ParseTreeListener):
 
     # Enter a parse tree produced by CalcParser#Predicate.
     def enterPredicate(self, ctx):
-        self.enter("Predicate", cgi.escape(ctx.op.text))
+        self.enter("Predicate", cgi.escape(ctx.op.text).lower())
 
     # Exit a parse tree produced by CalcParser#Predicate.
     def exitPredicate(self, ctx):
@@ -552,7 +552,6 @@ class CalcListener(ParseTreeListener):
         pass
 
     def enterRangeExpr(self,ctx):
-        import ipdb;ipdb.set_trace()
         self.enter("Range")
 
     def exitRangeExpr(self,ctx):
