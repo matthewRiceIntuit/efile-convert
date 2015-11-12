@@ -509,7 +509,7 @@ class CalcListener(ParseTreeListener):
         self.exit()
 
     def enterWithNewTag(self, ctx):
-        self.enter("WithNewTag",ctx.LITERAL().getText().strip('"'))
+        self.enter("WithNewTag")
 
     # Exit a parse tree produced by CalcParser#end_index.
     def exitWithNewTag(self, ctx):

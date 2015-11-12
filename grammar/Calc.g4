@@ -52,7 +52,7 @@ expr : expr op=('/' | '*') expr #DivMul
 	;
 argList : (expr (',' expr)*)? ;
 
-formdecl: 'FORM'  full_id ';' ;
+formdecl: ('FORM'|'Form')  full_id ';' ;
 
 vardecl : VAR declList*;
 constdecl : CONSTANT constdeclList*;
