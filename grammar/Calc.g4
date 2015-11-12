@@ -38,7 +38,7 @@ end_index: LITERAL|expr;
 
 expr : expr op=('/' | '*') expr #DivMul
 	| expr op=('+' | '-') expr #AddSub
-	| expr op=('and' | 'or') expr #Logic
+	| expr op=(AND | OR) expr #Logic
 	| expr op=('>' | '<' | '<=' | '>=' | '=' | '<>' | '==' | IN) expr #Predicate
 	| LITERAL #Literal
 	| rangeExpr # Range
@@ -152,6 +152,8 @@ BREAK: B R E A K;
 WITHFORMS: W I T H F O R M S;
 WITHNEWTAG: W I T H N E W T A G;
 IN: I N;
+AND: A N D;
+OR: O R;
 
 FORM: F O R M;
 
@@ -165,9 +167,9 @@ LET : ':=' ;
 ALTLET: '?=';
 CRAZYLET: '#=';
 
-full_id : ID array_index? child_id* sub_id* ;
+full_id : ID array_index? sub_id* child_id;
 
-child_id : ':' ID;
+child_id: (':' ID array_index? sub_id*)*;
 
 sub_id : '.' ID array_index?;
 ID : [a-zA-Z_][a-zA-Z_0-9]*;
