@@ -12,12 +12,15 @@ converter: 'XMLConverter' ID 'EFXML' ';';
 
 form: full_id;
 
-section :
-    PROCEDURE ID '(' typeDeclList ')' ';'
-    formdecl
+section : (procedureDecl|functionDecl)
+
 	vardecl?
 	stmt;
 
+functionDecl: FUNCTION  ID '(' typeDeclList ')' ':' r_type ';' ;
+
+procedureDecl:PROCEDURE ID '(' typeDeclList ')' ';'
+                  formdecl;
 
 block: BEGIN stmt* END;
 
@@ -144,6 +147,7 @@ ELSE : E L S E;
 THEN : T H E N ;
 SECTION: S E C T I O N;
 PROCEDURE: P R O C E D U R E;
+FUNCTION: F U N C T I O N;
 DO : D O;
 TO: T O;
 FOR: F O R;
