@@ -12,7 +12,7 @@ converter: 'XMLConverter' ID 'EFXML' ';';
 
 form: full_id;
 
-section : (procedureDecl|functionDecl)
+section : (procedureDecl|functionDecl|mainDecl)
 
 	vardecl?
 	stmt;
@@ -21,6 +21,8 @@ functionDecl: FUNCTION  ID '(' typeDeclList ')' ':' r_type ';' ;
 
 procedureDecl:PROCEDURE ID '(' typeDeclList ')' ';'
                   formdecl;
+
+mainDecl: MAIN '(' ')' ';';
 
 block: BEGIN stmt* END;
 
@@ -41,6 +43,7 @@ end_index: LITERAL|expr;
 
 expr : expr op=('/' | '*') expr #DivMul
 	| expr op=('+' | '-') expr #AddSub
+	| expr op=MOD expr #Mod
 	| expr op=(AND | OR) expr #Logic
 	| expr op=('>' | '<' | '<=' | '>=' | '=' | '<>' | '==' | IN) expr #Predicate
 	| LITERAL #Literal
@@ -69,9 +72,9 @@ constdeclList: varDecl '='  LITERAL ';';
 varDecl: ID;
 r_type: arrayDecl? ID;
 
-arrayDecl: ARRAY '[' LITERAL ']' OF;
+arrayDecl: (ARRAY|AUTOARRAY) '[' LITERAL ']' OF;
 
-rangeExpr: '[' expr ('..'|',') expr ']';
+rangeExpr: '[' expr ('..' expr|(',' expr)*) ']';
 
 ctrlStruct : ifStruct;
 
@@ -90,7 +93,7 @@ loopStruct : DO (WHILE preCond=expr)?
 
 caseStuct: CASE expr OF  caseStmt+ END ';';
 
-caseStmt:  LITERAL ':' block ';';
+caseStmt:  (LITERAL (',' LITERAL)* ':' | OTHERWISE ) stmt;
 
 forloopstruct: FOR ID ':=' expr TO expr DO  (block|stmt);
 
@@ -108,6 +111,7 @@ formPar : r_type name=full_id (LET defaultVal=expr)? ;
 
 LITERAL : INT
 	| STRING
+	| CHAR
 	;
 
 fragment A:('a'|'A');
@@ -138,8 +142,10 @@ fragment Y:('y'|'Y');
 fragment Z:('z'|'Z');
 
 ARRAY: A R R A Y;
+AUTOARRAY: A U T O A R R A Y;
 OF: O F;
 CASE: C A S E;
+OTHERWISE: O T H E R W I S E;
 VAR: V A R;
 CONSTANT: C O N S T A N T;
 IF : I F ;
@@ -158,6 +164,8 @@ WITHNEWTAG: W I T H N E W T A G;
 IN: I N;
 AND: A N D;
 OR: O R;
+MOD: M O D;
+MAIN: M A I N;
 
 FORM: F O R M;
 
@@ -177,10 +185,13 @@ child_id: ':' full_id;
 
 sub_id : '.' ID array_index?;
 ID : [a-zA-Z_][a-zA-Z_0-9]*;
-array_index: ('[' expr ']');
+array_index: ('[' (LITERAL|expr) ']');
 
 INT : '-'? '.'? [0-9]+ ('.' [0-9]+)?;
-STRING : '"' .*? '"' ;
+ESC: '""';
+STRING: '"' ( ESC | ~[""] )* '"';
+QUOTE : '\'';
+CHAR: QUOTE . QUOTE;
 
 boolean : TRUE|FALSE|CHECKED;
 TRUE:  T R U E;

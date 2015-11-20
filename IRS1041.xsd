@@ -843,7 +843,7 @@ elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 			</xsd:element>
 
 			<!-- Tax Paid By RIC Or REIT Amount -->
-			<xsd:element name="TaxPaidByRICOrREITAmt" minOccurs="0">
+			<xsd:element name="OtherIncomeDescAndAmt" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
 						<Description>Tax Paid By RIC Or REIT Amount</Description>

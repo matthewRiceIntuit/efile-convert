@@ -21,11 +21,13 @@ def antrl_parse(input_stream, debug):
 
     return tree
 
-def tree2xml(tree):
+def tree2xml(tree, debug=False):
 
     walker = ParseTreeWalker()
 
     listner = CalcListener()
     walker.walk(listner, tree)
+    if debug:
+        print  listner.output
 
     return etree.XML('<?xml version="1.0" ?>' + listner.output)

@@ -1,0 +1,10 @@
+{
+ "ptformset_xml_path": "/Users/mrice/Dev/TaxContent/tax/ty15/main/state/incometax/il/fiduc/pri_tool/il1041.ptformset",
+ "form_source": "/Users/mrice/Dev/TaxContent/tax/ty15/main/state/incometax/il/fiduc/pri_tool/",
+ "preprocessed": "/Users/mrice/Dev/TaxContent/tax/ty15/main/state/incometax/il/fiduc/efiling/ilf_preprocessed.clc",
+ "mefformset":"ILFiduciary",
+ "schema_folder":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2014.dev/agency/ilf/mef/schemas/ILESTRST2014V3.0/ILEstateTrust/",
+ "return_data":"ReturnDataIL1041.xsd",
+ "verify_path":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2014.dev/agency/ilf/mef/il-fid-filing/src/"
+}
+

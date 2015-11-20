@@ -1,0 +1,10 @@
+{
+ "ptformset_xml_path": "/Users/mrice/Dev/TaxContent/tax/ty15/main/state/incometax/ma/fiduc/pri_tool/maf.ptformset",
+ "form_source": "/Users/mrice/Dev/TaxContent/tax/ty15/main/state/incometax/ma/fiduc/pri_tool/",
+ "preprocessed": "/Users/mrice/Dev/TaxContent/tax/ty15/main/state/incometax/ma/fiduc/efiling/maf_preprocessed.clc",
+ "mefformset":"MAFiduciary",
+ "schema_folder":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2014.dev/agency/maf/mef/schemas/2014v4.0/EstateTrustIncomeTax/1041/",
+ "return_data":"ReturnData1041.xsd",
+ "verify_path":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2014.dev/agency/maf/mef/ma-fid-filing/src/"
+}
+

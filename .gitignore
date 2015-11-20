@@ -1,6 +1,7 @@
 .DS_Store
 dist/*
 build/*
+output/*
 *.zip*
 *.txt
 *.clc
