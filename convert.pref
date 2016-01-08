@@ -1,15 +1,12 @@
 {
- "ptformset_xml_path": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/corp/pri_tool/fs1120.ptformset",
  "ptformset_xml_path": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/fiduc/pri_tool/fs1041.ptformset",
- "form_source": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/corp/pri_tool/",
  "form_source": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/fiduc/pri_tool/",
- "preprocessed": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/fiduc/efiling/1120_preprocessed.clc",
- "schema":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2015.dev/agency/cpc/2015v2.0/CorporateIncomeTax/Corp1120/IRS1120/IRS1120.xsd",
- "schema":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2014.dev/agency/fif/mef/schemas/2014v4.0/EstateTrustIncomeTax/1041/IRS1041/IRS1041.xsd",
- "mefformset":"USFiduciary",
- "schema_folder":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2014.dev/agency/fif/mef/schemas/2014v4.0/EstateTrustIncomeTax/1041/",
+ "_preprocessed": "irs1041.inc",
+  "preprocessed": "/Users/mrice/Dev/TaxContent/tax/ty15/main/federal/incometax/us/fiduc/efiling/efiling_preprocessed.clc",
+  "mefformset":"USFiduciary",
+ "schema_folder":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2015.dev/agency/fif/mef/schemas/2015v3.0/EstateTrustIncomeTax/1041/",
  "return_data":"ReturnData1041.xsd",
- "verify_path":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2014.dev/agency/fif/mef/irs-fid-filing/src/"
+ "verify_path":"/Users/mrice/Dev/TaxContent/services/ef/convert/branches/2015.dev/agency/fif/mef/irs-fid-filing/src/"
 
 }
 

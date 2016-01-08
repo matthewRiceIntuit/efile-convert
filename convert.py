@@ -2,6 +2,7 @@ import sys
 import argparse
 import os
 import lxml.etree as etree
+from copy import deepcopy
 import re
 from subprocess import check_output
 from antlr4.InputStream import InputStream
@@ -23,7 +24,7 @@ fields = set()
 namespaces = {'xsd': 'http://www.w3.org/2001/XMLSchema'}
 
 
-def write_row(error, tps, mef, func, cid, the_type, field_on_value=None, ref_name=None):
+def write_row(error, tps, mef, func, cid, the_type='', field_on_value=None, ref_name=None,altid=''):
     field = etree.SubElement(output, "Field")
     if ref_name:
         field.set("RefName", ref_name[0])
@@ -33,20 +34,25 @@ def write_row(error, tps, mef, func, cid, the_type, field_on_value=None, ref_nam
         error = "Mapped"
     field.set("SourceType", error)
     field.set("TargetPath", mef)
-    field.set("TargetType", the_type.replace("xsd:",'') or "ERROR")
+    try:
+        field.set("TargetType", the_type.replace("xsd:",'') or "ERROR")
+    except Exception, e:
+        field.set("TargetType", "ERROR")
 
     if func:
         field.set("func", func)
     if field_on_value:
         field.set("field_on_value", field_on_value)
     field.set("tps", tps)
+    if altid:
+        field.set("alt_tps_id",altid)
 
 
-def render_field(form, field, mefform, meffield, func='', meftable='', ref_name=''):
+def render_field(form, field, mefform, meffield, func='', meftable='', ref_name='', form_source=''):
     found = False
 
     if meftable:
-        if not output.xpath("//Field[@Source='%s']" % meftable):
+        if not output.xpath("//Field[@TargetPath='%s']" % meftable):
             tablefield = etree.SubElement(output, "Field")
             tablefield.set("Source", meftable.replace("/",''))
             tablefield.set("TargetPath", meftable)
@@ -75,12 +81,18 @@ def render_field(form, field, mefform, meffield, func='', meftable='', ref_name=
         try:
             the_type = schema.findall('//xsd:element[@name="%s"]' %  meffield, namespaces)[0].get('type')
         except Exception:
-            the_type = "UNKNOWN"
+            if meffield == 'Desc':
+                the_type="LineExplanationType"
+            elif meffield=="Amt":
+                the_type="USAmountType"
+            else:
+                the_type = "UNKNOWN"
 
     for ptfield in ptform_xml.xpath('//field[@id="%s"][field_attributes/cid_mapping]' % field):
         found = True
         context = ptfield.xpath('../..')[0].tag + ptfield.get("context", "")
         desc = ptfield.xpath("./field_attributes/main/name_and_descriptions/description/@value")
+        altid =  (ptfield.xpath("./field_attributes/image/refined_image/alternate_field_id/@value") or  [''])[0]
         formml_form_id = (ptfield.xpath("./field_attributes/cid_mapping/formml_form_id/@value") or [''])[0]
         formml_field_id = (ptfield.xpath("./field_attributes/cid_mapping/formml_field_id/@value") or [''])[0]
         formml_table_id = ( ptfield.xpath("./field_attributes/cid_mapping/formml_table_id/@value") or [''])[0]
@@ -96,20 +108,31 @@ def render_field(form, field, mefform, meffield, func='', meftable='', ref_name=
             cid,
             the_type,
             '' if not formml_field_on_value else   formml_field_on_value[0],
-            ref_name=ref_name
+            ref_name=ref_name ,
+            altid=altid
 
         )
         return
     if not found:
+        if field=="PARTOFRETURN":
+            return
         write_row(
             "NO CID",
             "%s.%s" % ( form, field),
             mef,
             '' if func == 'ID' else func,
-            mef,
+            "%s/%s" % ( meftable.replace('/',''), meffield) if meftable else "%s" % ( meffield),
             the_type,
             ref_name=ref_name,
         )
+        if "common" in form_source:
+            return
+        print form_source
+        print form,".",field
+        print mef
+        print the_type
+        print ref_name
+        import ipdb;ipdb.set_trace()
 
 
 def getOutputValueFieldID(form, node):
@@ -118,12 +141,12 @@ def getOutputValueFieldID(form, node):
 
     elif node.xpath('.//ID'):
         return form, node.xpath(".//ID/@val")[0].upper()
-    elif len(node.xpath(".//String"))==2:
-        return form, node.xpath(".//String[2]/@val")[0].upper()
     else:
-        ifstruct = node.xpath('./ancestor::IfStruct')
         try:
-            return form, ifstruct[-1].xpath('.//ID/@val')[0].upper()
+            if not node.xpath("*[2]/@val")[0] in ["X","0","false",'true']:
+                return form, "STRING(%s)" % node.xpath("*[2]/@val")[0]
+            else:
+                return form, node.xpath('./ancestor::IfStruct//ID/@val')[0].upper()
         except Exception:
             return form, "ERROR"
 
@@ -141,11 +164,17 @@ if __name__ == '__main__':
                         required=False,
                         default=False)
 
+
     parser.add_argument("--debug", help="Show parsing steps", default=False)
     arg = parser.parse_args()
     debug = arg.debug
-    with open(arg.pref_file) as settings_file:
-        settings = json.load(settings_file)
+    if arg.fs:
+        mainpom= etree.parse("/Users/mrice/Dev/TaxContent/apdpom.xml")
+
+
+    else:
+        with open(arg.pref_file) as settings_file:
+            settings = json.load(settings_file)
 
     if arg.use_preparsed:
         root = etree.parse("output/preparsed.xml")
@@ -174,11 +203,29 @@ if __name__ == '__main__':
 
     ptformset_xml = etree.parse(settings['ptformset_xml_path'])
 
+
+    ### Clean up procedure calls
+    main = root.xpath("/CALC/Section[MainDecl]")[0]
+    main.getparent().remove(main)
+
+    for proc in root.xpath("//ProcedureID"):
+        node = root.xpath("//%s" % proc.get("val").upper())
+        if node:
+            print "Shared Procedure: ", proc.get("val")
+            proc.getparent().tag = "CALLED_PROCEDURE"
+            try:
+                proc=proc.xpath("../WithNewTag|../*[.//WithNewTag]")[0]
+            except Exception:
+                continue
+            newbie = deepcopy(proc)
+            node[0].append(newbie)
+
+
     for section in root.xpath("//Section"):
         output = etree.Element("Document")
 
         try:
-            form = section.xpath("FormDecl//ID[not(name(..)='ArrayIndex')]/@val")[-1].upper()
+            form = section.xpath("ProcedureID/FormDecl//ID[not(name(..)='ArrayIndex')]/@val")[-1].upper()
             print "## TPS FORM: ", form
             form_source = os.path.abspath(settings['form_source'] + ptformset_xml.xpath("/formsetdoc/form_identification_list/form_identification[@form_id='%s']/@form_source" % form)[0].replace("\\", "/"))
             ptform_xml = etree.parse(form_source)
@@ -198,40 +245,49 @@ if __name__ == '__main__':
         print "## MEF form ##: ", mefform
         roottag.tag = 'RootWithNewTag'
 
-        schema_file = get_schema_file(settings, mefform)
+        documentName = roottag.xpath("./SETATTRIBUTE/ArgList[String[@val='documentName']]/String[2]/@val")
+
+        schema_file = get_schema_file(settings, mefform, documentName )
         print "## schema ###: ", schema_file
         if schema_file:
             schema = etree.parse(schema_file)
         else:
             schema  = etree.fromstring("<xml/>")
 
+        for each in roottag.xpath(".//OUTPUTLITERAL"):
+            try:
+                meffield = each.xpath('./ancestor::WithNewTag')[-1].xpath('./String/@val')[0]
+            except Exception:
+                meffield = each.xpath('./ancestor::RootWithNewTag')[-1].xpath('./String/@val')[0]
 
-        for statement in roottag.getchildren():
+            try:
+                ref_name=each.xpath('./ancestor::WithNewTag')[-1].xpath("./SETATTRIBUTE/ArgList[String[1]/@val='referenceDocumentName']/String[2]/@val")
+            except Exception:
+                ref_name=each.xpath('./ancestor::RootWithNewTag')[-1].xpath("./SETATTRIBUTE/ArgList[String[1]/@val='referenceDocumentName']/String[2]/@val")
 
-            test = statement.xpath('.//WithNewTag[.//OUTPUTVALUE]')
-            if test:
-                for each in test:
-                    import ipdb;ipdb.set_trace()
-                    meftable = "%s/%s"  %(statement.xpath('./String/@val')[0] , each.getchildren()[0].get('val'))
-                    for outputvalue in each.xpath('.//OUTPUTVALUE/ArgList'):
-                        meffield = outputvalue.getchildren()[0].get('val')
-                        _form, field = getOutputValueFieldID(form, outputvalue)
-                        func = outputvalue.getchildren()[1].tag
-                        render_field(_form, field, mefform, meffield, meftable=meftable)
-            else:
-                for each in statement.xpath('.//WithNewTag'):
-                    meffield = each.getchildren()[0].get('val')
-                    try:
-                        field = each.xpath('./ancestor::IfStruct//ID/@val')[0]
-                    except Exception:
-                        continue
-                    render_field(form, field, mefform, meffield, ref_name=each.xpath("./SETATTRIBUTE/ArgList[String[1]/@val='referenceDocumentName']/String[2]/@val"))
+            field =  each.xpath('./ancestor::IfStruct//ID/@val')[0].upper()
 
-                for each in statement.xpath('./descendant-or-self::OUTPUTVALUE/ArgList'):
-                    meffield = each.getchildren()[0].get('val')
-                    _form, field = getOutputValueFieldID(form, each)
-                    func = each.getchildren()[1].tag
-                    render_field(_form, field, mefform, meffield, func)
+            meftable = '/'.join(each.xpath('./ancestor::WithNewTag/String[1]/@val')[:-1])
+
+
+            render_field(form, field, mefform,meffield, meftable=meftable,ref_name=ref_name,form_source=form_source )
+
+        for each in roottag.xpath(".//OUTPUTVALUE/ArgList"):
+            meffield = each.getchildren()[0].get('val')
+
+            _form, field = getOutputValueFieldID(form, each)
+            func = each.getchildren()[1].tag
+
+            meftable = '/'.join(each.xpath('./ancestor::WithNewTag/String[1]/@val'))
+
+            render_field(_form, field, mefform,meffield, meftable=meftable , func=func,form_source=form_source)
+
+
+        if debug:
+            pretty_print(output)
+
+
+        #continue
 
         try:
             os.mkdir('output/%s_tps' % (settings.get('mefformset')))
@@ -239,13 +295,29 @@ if __name__ == '__main__':
         except Exception:
             pass
 
-        if debug:
-            pretty_print(output)
-
+        alist=[]
         with open('output/%s_tps/%s_output.xml' % (settings.get('mefformset'),mefform), 'w') as f:
-            f.write(etree.tostring(output,pretty_print=True))
+            f.write(get_header(settings.get("mefformset"), mefform))
+            for each in output.getchildren():
+                if 'tps' in each.attrib:
+                    alist.append(each.attrib['tps'].split('.')[-1])
+                f.write('\t' + etree.tostring(each) + '\n')
+            for ptfield in ptform_xml.xpath('//field[field_attributes/cid_mapping]'):
+                if ptfield.attrib['id'] in alist:
+                    continue
+                altid = (ptfield.xpath("./field_attributes/image/refined_image/alternate_field_id/@value") or [''])[0]
+                cid =  (ptfield.xpath("./field_attributes/cid_mapping/formml_field_id/@value") or [''])[0]
+                f.write("\t<tps id='{0}'  type='{1}' {2} {3}/>\n".format(ptfield.attrib['id'],
+                                                                            (ptfield.xpath("./field_attributes/main/type/@value") or [''])[0],
+                                                                            "" if not altid else "altid='%s' " % altid.upper(),
+                                                                            "" if not cid else "cid='%s' " % cid
+                                                                            ))
 
-        verify(settings, mefform, output)
+
+
+            f.write("</Document>")
+
+        verify(settings, mefform, output, documentName)
 
         with open('output/%s/%s.xml' %  (settings.get('mefformset'),mefform), 'w') as f:
             f.write(get_header(settings.get("mefformset"), mefform))

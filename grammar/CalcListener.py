@@ -48,10 +48,7 @@ class CalcListener(ParseTreeListener):
 
     # Enter a parse tree produced by CalcParser#program.
     def enterSection(self, ctx):
-        try:
-            self.enter('Section', ctx.ID().getText())
-        except Exception:
-            self.enter('Section', "NONE")
+        self.enter('Section')
 
     # Exit a parse tree produced by CalcParser#program.
     def exitSection(self, ctx):
@@ -573,18 +570,18 @@ class CalcListener(ParseTreeListener):
         self.exit()
 
     def enterFunctionDecl(self, ctx):
-        self.enter('FunctionDecl')
+        self.enter('FunctionDecl', ctx.ID().getText())
 
     # Exit a parse tree produced by CalcParser#formset.
     def exitFunctionDecl(self, ctx):
         self.exit()
 
     def enterProcedureDecl(self, ctx):
-        pass
+        self.enter('ProcedureID', ctx.ID().getText())
 
     # Exit a parse tree produced by CalcParser#formset.
     def exitProcedureDecl(self, ctx):
-        pass
+        self.exit()
 
     def enterMainDecl(self, ctx):
         self.enter('MainDecl')
