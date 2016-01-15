@@ -168,13 +168,10 @@ if __name__ == '__main__':
     parser.add_argument("--debug", help="Show parsing steps", default=False)
     arg = parser.parse_args()
     debug = arg.debug
-    if arg.fs:
-        mainpom= etree.parse("/Users/mrice/Dev/TaxContent/apdpom.xml")
 
 
-    else:
-        with open(arg.pref_file) as settings_file:
-            settings = json.load(settings_file)
+    with open(arg.pref_file) as settings_file:
+        settings = json.load(settings_file)
 
     if arg.use_preparsed:
         root = etree.parse("output/preparsed.xml")

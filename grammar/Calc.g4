@@ -20,14 +20,14 @@ section : (procedureDecl|functionDecl|mainDecl)
 functionDecl: FUNCTION  ID '(' typeDeclList ')' ':' r_type ';' ;
 
 procedureDecl:PROCEDURE ID '(' typeDeclList ')' ';'
-                  formdecl;
+                  formdecl?;
 
 mainDecl: MAIN '(' ')' ';';
 
 block: BEGIN stmt* END;
 
-stmt: (assign | call  | ret | block |   breakStruct ) ';' |forloopstruct|  ifStruct |caseStuct| withForms |withNewTag;
-open_stmt: assign | call  | ret | block |caseStuct| forloopstruct|ifStruct | withForms |withNewTag;
+stmt: (assign | call  | ret | block |  breakStruct ) ';' |forloopstruct|  ifStruct |caseStuct| withForms |withNewTag;
+open_stmt: assign | call  | ret | block |caseStuct| forloopstruct|ifStruct | withForms |withNewTag | breakStruct;
 
 assign: full_id (LET|ALTLET|CRAZYLET) expr ;
 
@@ -45,7 +45,7 @@ expr : expr op=('/' | '*') expr #DivMul
 	| expr op=('+' | '-') expr #AddSub
 	| expr op=MOD expr #Mod
 	| expr op=(AND | OR) expr #Logic
-	| expr op=('>' | '<' | '<=' | '>=' | '=' | '<>' | '==' | IN) expr #Predicate
+	| expr op=('>' | '<' | '<=' | '>=' | '=' | '!=' | '<>' | '==' | IN) expr #Predicate
 	| LITERAL #Literal
 	| rangeExpr # Range
 	| NOT expr #Not
