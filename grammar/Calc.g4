@@ -26,8 +26,8 @@ mainDecl: MAIN '(' ')' ';';
 
 block: BEGIN stmt* END;
 
-stmt: (assign | call  | ret | block |  breakStruct ) ';' |forloopstruct|  ifStruct |caseStuct| withForms |withNewTag;
-open_stmt: assign | call  | ret | block |caseStuct| forloopstruct|ifStruct | withForms |withNewTag | breakStruct;
+stmt: open_stmt ';' ;
+open_stmt: assign | call  | ret | block | caseStuct | forloopstruct | ifStruct | withForms | withNewTag | breakStruct;
 
 assign: full_id (LET|ALTLET|CRAZYLET) expr ;
 
@@ -80,10 +80,10 @@ ctrlStruct : ifStruct;
 
 
 
-ifStruct : IF expr THEN open_stmt (';'|ELSE elseStruct)?;
+ifStruct : IF expr THEN open_stmt (ELSE open_stmt)?;
 
-withForms: WITHFORMS '(' full_id ',' full_id ')' DO  stmt;
-withNewTag: WITHNEWTAG '(' expr ')' DO  stmt;
+withForms: WITHFORMS '(' full_id ',' full_id ')' DO  open_stmt;
+withNewTag: WITHNEWTAG '(' expr ')' DO  open_stmt;
 
 elseStruct: stmt;
 
@@ -91,11 +91,11 @@ loopStruct : DO (WHILE preCond=expr)?
 				stmt
 			LOOP (WHILE postCond=expr)? ;
 
-caseStuct: CASE expr OF  caseStmt+ END ';';
+caseStuct: CASE expr OF  caseStmt + END;
 
 caseStmt:  (LITERAL (',' LITERAL)* ':' | OTHERWISE ) stmt;
 
-forloopstruct: FOR ID ':=' expr TO expr DO  (block|stmt);
+forloopstruct: FOR ID ':=' expr TO expr DO  open_stmt;
 
 breakStruct: BREAK;
 
